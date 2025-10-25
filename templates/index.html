@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% block title %}Home | Maxim Cypher{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="hero">
+    <img src="{% static 'images/hero.jpg' %}" alt="Hero Image">
+    <h2>AI-Driven Visuals. Made to Move People.</h2>
+    <p>Discover creative assets created by generative AI...</p>
+</section>
+
+<!-- Featured Work -->
+<section class="featured">
+    <h3>Featured work</h3>
+    <div class="grid">
+        <div class="card">
+            <img src="{% static 'images/sample1.jpg' %}" alt="">
+            <p>AI-generated portraits with unique artistic twists.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/sample2.jpg' %}" alt="">
+            <p>Futuristic album covers and concepts.</p>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/sample3.jpg' %}" alt="">
+            <p>Immersive sci-fi storytelling scenes.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Pricing -->
+<section class="pricing">
+    <h3>Select a plan</h3>
+    <div class="plans">
+        <div class="plan">
+            <h4>Free</h4>
+            <p>£0/month</p>
+            <button>Get Started</button>
+        </div>
+        <div class="plan">
+            <h4>Creator Access</h4>
+            <p>£20/month</p>
+            <button>Subscribe</button>
+        </div>
+        <div class="plan">
+            <h4>Pro Access</h4>
+            <p>£39/month</p>
+            <button>Subscribe</button>
+        </div>
+    </div>
+</section>
+
+<!-- Categories -->
+<section class="categories">
+    <h3>Browse by category</h3>
+    <div class="grid">
+        <img src="{% static 'images/social.jpg' %}" alt="Social Media">
+        <img src="{% static 'images/album.jpg' %}" alt="Album Art">
+        <img src="{% static 'images/ad.jpg' %}" alt="Ad Creative">
+        <img src="{% static 'images/background.jpg' %}" alt="Background">
+    </div>
+</section>
+
+<!-- Creator Application -->
+<section class="apply">
+    <h3>Apply to be a creator</h3>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email Address">
+        <input type="text" name="speciality" placeholder="Speciality">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button type="submit">Join</button>
+    </form>
+</section>
+
+{% endblock %}
