@@ -4,14 +4,17 @@ from home.views import index
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    # Authentication
     path("accounts/", include("allauth.urls")),  # Django Allauth
     path(
         "user/", include("accounts.urls")
-    ),  # Your custom account views (e.g., premium dashboard)
+    ),  # Custom account routes (e.g., premium dashboard)
+    # Core Pages
     path("", index, name="home"),
     path("portfolio/", include("portfolio.urls")),
     path("contact/", include("contact.urls")),
     path("faq/", include("faq.urls")),
     path("", include("home.urls")),
-    path("checkout/", include("checkout.urls", namespace="checkout")),
+    # Checkout / Payments
+    path("checkout/", include(("checkout.urls", "checkout"), namespace="checkout")),
 ]

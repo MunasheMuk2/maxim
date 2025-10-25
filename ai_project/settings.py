@@ -13,8 +13,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # --- Security ---
-SECRET_KEY = os.environ.get("SECRET_KEY")
-DEBUG = True
+SECRET_KEY = os.environ.get("SECRET_KEY", "your-default-secret-key")
+DEBUG = False  # Set to True only for local development
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".herokuapp.com"]
 
 # --- Installed Apps ---
@@ -25,14 +25,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    # Local apps
     "home",
     "portfolio",
     "contact",
     "faq",
     "checkout",
     "accounts",
-    # Auth
     "django.contrib.sites",
     "allauth",
     "allauth.account",
@@ -63,7 +61,7 @@ TEMPLATES = [
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
-                "django.template.context_processors.request",  # required by allauth
+                "django.template.context_processors.request",  # Required by allauth
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
@@ -75,16 +73,6 @@ WSGI_APPLICATION = "ai_project.wsgi.application"
 
 # --- Database ---
 DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
-
-# --- Password Validation ---
-AUTH_PASSWORD_VALIDATORS = [
-    {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
-    },
-    {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
-    {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
-    {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
-]
 
 # --- Authentication ---
 AUTHENTICATION_BACKENDS = [
