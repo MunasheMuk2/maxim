@@ -1,47 +1,69 @@
-{% load static %}
+{% load static %} {% url 'account_login' as login_url %} {% url 'account_signup'
+as signup_url %} {% url 'account_logout' as logout_url %}
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Maxim Cypher{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
 
-<body> 
-
+  <body>
     <header>
-        <nav>
-            <div class="logo">Maxim Cypher</div>
-            <ul>
-                <li><a href="{% url 'home' %}">Home</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact</a></li>
-                <a href="{% url 'account_login' %}">Login</a>
-            </ul>
-            <a href="#" class="btn">Get Started</a>
-        </nav>
+      <nav>
+        <div class="logo">Maxim Cypher</div>
+        <ul>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Contact</a></li>
+
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == logout_url %}active{% endif %}"
+              aria-current="page"
+              href="{% url 'account_logout' %}"
+              >Logout</a
+            >
+          </li>
+          {% else %}
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == signup_url %}active{% endif %}"
+              aria-current="page"
+              href="{% url 'account_signup' %}"
+              >Register</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link {% if request.path == login_url %}active{% endif %}"
+              aria-current="page"
+              href="{% url 'account_login' %}"
+              >Login</a
+            >
+          </li>
+          {% endif %}
+        </ul>
+        <a href="#" class="btn">Get Started</a>
+      </nav>
     </header>
 
     <!-- Page content -->
-    <main>
-        {% block content %}{% endblock %}
-    </main>
+    <main>{% block content %}{% endblock %}</main>
 
     <!-- Footer -->
     <footer>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Select a plan</a></li>
-        </ul>
-        <p>&copy; {{ year }} Maxim Cypher</p>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Select a plan</a></li>
+      </ul>
+      <p>&copy; {{ year }} Maxim Cypher</p>
     </footer>
-
-
-
-</body> 
+  </body>
 </html>
