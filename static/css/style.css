@@ -81,3 +81,12 @@ body {
     background: #0056b3;
     transform: scale(1.05);
 }
+
+
+/* Apply form  */
+
+.apply {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
