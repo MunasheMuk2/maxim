@@ -7,6 +7,10 @@ h3 {
   color: red;
 }
 
+html body {
+  background: red !important;
+}
+
 
 * {
   margin: 0;
