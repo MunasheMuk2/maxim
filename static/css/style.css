@@ -91,6 +91,39 @@ body {
   width:100%;
 }
 
+/* Categories Section */
+.categories {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.categories h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.categories .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categories .grid img {
+  width: 100%;       /* fill the grid cell */
+  height: auto;      /* keep aspect ratio */
+  border-radius: 12px;
+  object-fit: cover; /* crop instead of stretch */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.categories .grid img:hover {
+  transform: scale(1.05); /* nice hover zoom */
+}
+
 /* Apply form  */
 
 .apply {
