@@ -86,8 +86,9 @@ body {
 /* Apply form  */
 
 .apply {
-    display: inline;
-    justify-content:center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items:center;
     background: #000; 
     color: #fff;
