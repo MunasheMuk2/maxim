@@ -3,6 +3,9 @@
 .plansheader {
   color: blue;
 }
+h3 {
+  color: red;
+}
 
 body {
   background: red !important;
