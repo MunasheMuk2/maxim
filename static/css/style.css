@@ -82,6 +82,10 @@ body {
   transform: scale(1.05);
 }
 
+.grid{
+  width:100%;
+}
+
 /* Apply form  */
 
 .apply {
