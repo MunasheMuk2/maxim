@@ -86,7 +86,17 @@ body {
 /* Apply form  */
 
 .apply {
-    display: flex;
+    display: inline;
     justify-content:center;
     align-items:center;
+    background: #000; 
+    color: #fff;
+    max-width: 500px; /* allow more width for 2 columns */
+    margin: 30px auto; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    font-size: 0.9rem; 
+    margin-bottom:2rem;
+    width:100%;
 }
