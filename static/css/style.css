@@ -13,6 +13,10 @@ body {
   color: #333;
 }
 
+.main-header{
+  color:red;
+}
+
 .featured h3 {
   text-align:center;
 
@@ -37,7 +41,7 @@ gap:20px;
 }
 
 .photo img{
-  width: 100%;
+  width: 90%;
   height:100%;
   border-radius:5px;
   object-fit:cover;
