@@ -9,7 +9,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color:red;
+  background: red !important;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -26,9 +26,6 @@ body {
     display: inline-block;
 }
 
-.main-header{
-  color:red;
-}
 
 .featured h3 {
   text-align:center;
