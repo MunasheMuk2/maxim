@@ -13,6 +13,11 @@ body {
   color: #333;
 }
 
+.featured h3 {
+  text-align:center;
+  
+}
+
 /* Pricing Section */
 .pricing {
   padding: 60px 20px;
