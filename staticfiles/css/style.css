@@ -14,6 +14,18 @@ body {
   color: #333;
 }
 
+/* Nav image - banner image below navigation bar */
+.nav-image-wrapper {
+    width: 100%;
+    text-align: center;  /* centers image if not full width */
+}
+
+.nav-image {
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
 .main-header{
   color:red;
 }
