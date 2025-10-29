@@ -24,16 +24,16 @@ Ready to elevate your brand, story, or product. </p> <br>
           class="img-fluid rounded mb-2"
           alt="icon of a car"
         >
-        <figcaption><h2 class="services">“Fantastic work, really pleased with my 
-            personalised fashion brand visuals”</h2></figcaption>
+        <figcaption><p class="services">“Fantastic work, really pleased with my 
+            personalised fashion brand visuals”</p></figcaption>
       </figure>
       <figure class="col-md-4">
         <img
           src="{% static 'images/maxim.png' %}"
           class="img-fluid rounded mb-2"
           alt="icon of a seat">
-          <figcaption><h2 class="services">“Fantastic work, really pleased with my 
-            personalised fashion brand visuals”</h2></figcaption>
+          <figcaption><p class="services">“Fantastic work, really pleased with my 
+            personalised fashion brand visuals”</p></figcaption>
       </figure>
       <figure class="col-md-4">
         <img
@@ -41,31 +41,44 @@ Ready to elevate your brand, story, or product. </p> <br>
           class="img-fluid rounded mb-2"
           alt="icon of an engine"
         >
-        <figcaption><h2 class="services">“Fantastic work, really pleased with my 
-            personalised fashion brand visuals”</h2></figcaption>
+        <figcaption><p class="services">“Fantastic work, really pleased with my 
+            personalised fashion brand visuals”</p></figcaption>
       </figure>
     </div>
   </div>
 </section>
 
-<section id="gallery"> 
-  <div id="photos"> 
+<div id="container"> 
+  <div id="photo gallery"> 
+    <div class="column"> 
+      <div class= "photo"> 
 
-    <img src="{% static 'images/girls.webp' %}" alt="Three girls at charity paint running festival">
-    <img src="{% static 'images/runner3.webp' %}" alt="Solo male runner jogging on beach">
-    <img src="{% static 'images/man.webp' %}" alt="Man at charity paint running festival">
-    <img src="{% static 'images/runner1.webp' %}" alt="Solo female runner jogging through Phoenix Park">
-    <img src="{% static 'images/runner2.webp' %}" alt="Runners competing in marathon">
-    <img src="{% static 'images/runner4.webp' %}" alt="Solo female runner jogging on beach">
-    <img src="{% static 'images/running_gang.webp' %}" alt="Large group of runners taking part in a marathon on a rainy day">
-    <img src="{% static 'images/mud-run.webp' %}" alt="Two women runners taking a muddy selfie after the Mud Runners championship">
-    
+        <img src="{% static 'images/girls.webp' %}" alt="Three girls at charity paint running festival">
+        <img src="{% static 'images/runner3.webp' %}" alt="Solo male runner jogging on beach">
+        <img src="{% static 'images/man.webp' %}" alt="Man at charity paint running festival">
+      </div>
+    </div> 
 
+    <div class="column"> 
+      <div class= "photo"> 
+
+        <img src="{% static 'images/runner1.webp' %}" alt="Solo female runner jogging through Phoenix Park">
+        <img src="{% static 'images/runner2.webp' %}" alt="Runners competing in marathon">
+        <img src="{% static 'images/runner4.webp' %}" alt="Solo female runner jogging on beach">
+      </div>
+    </div> 
+
+    <div class="column"> 
+      <div class= "photo"> 
+
+        <img src="{% static 'images/runner4.webp' %}" alt="Solo female runner jogging on beach">
+        <img src="{% static 'images/running_gang.webp' %}" alt="Large group of runners taking part in a marathon on a rainy day">
+        <img src="{% static 'images/mud-run.webp' %}" alt="Two women runners taking a muddy selfie after the Mud Runners championship">
+      </div>
+    </div> 
   </div> 
 
-
-
-</section>  
+</div>  
 
 <!-- Pricing -->
 <section class="pricing">
