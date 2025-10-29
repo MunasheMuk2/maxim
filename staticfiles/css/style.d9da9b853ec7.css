@@ -1,0 +1,177 @@
+/* General Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Pricing Section */
+.pricing {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.pricing h3 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 12px;
+  border: 2px dashed #ccc; /* dotted look */
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.plan:hover {
+  border-color: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.plan h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* CTA Buttons */
+.plan button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.plan button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.grid{
+  width:100%;
+}
+
+/* Categories Section */
+.categories {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.categories h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.categories .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categories .grid img {
+  width: 100%;       /* fill the grid cell */
+  height: auto;      /* keep aspect ratio */
+  border-radius: 12px;
+  object-fit: cover; /* crop instead of stretch */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.categories .grid img:hover {
+  transform: scale(1.05); /* nice hover zoom */
+}
+
+/* Apply form  */
+
+.apply {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.apply h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form inputs */
+.apply form input,
+.apply form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.apply form input:focus,
+.apply form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Textarea */
+.apply form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Button */
+.apply form button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: #007bff;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.apply form button:hover {
+  background: #0056b3;
+}
