@@ -9,7 +9,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background: red !important;
+  background: blue !important;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -31,30 +31,29 @@ body {
   text-align:center;
 
 }
-
 .container {
   max-width: 1224px;
-  width:90%;
-  margin:auto;
+  width: 90%;
+  margin: auto;
   padding: 40px 0;
 }
 
-.photo-gallery{
-  display:flex;
-  gap:20px;
+.photo-gallery {
+  display: flex;
+  gap: 20px;
 }
 
-.column{
-display:flex;
-flex-direction: column;
-gap:20px;
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.photo img{
-  width: 90%;
-  height:100%;
-  border-radius:5px;
-  object-fit:cover;
+.photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
 }
 
 
