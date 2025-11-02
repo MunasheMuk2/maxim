@@ -1,9 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* General Reset */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+}
+
+body, p, a, li {
+  font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -24,6 +34,18 @@ body {
     max-width: 100%;
     height: auto;
     display: inline-block;
+}
+
+.main-header{
+  font-size: 70px;
+}
+
+.main-header span {
+  font-weight: bold;
+}
+
+.main-content {
+  text-align:center;
 }
 
 
