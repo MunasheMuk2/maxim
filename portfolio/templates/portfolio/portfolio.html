@@ -1,10 +1,18 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block title %}Portfolio | Maxim Cypher{% endblock %}
 
 {% block nav_image %}
 <!-- Intentionally left empty to hide the nav image -->
 {% endblock %}
 
 {% block content %}
-    <h1>My Portfolio</h1>
-    <p>This is the portfolio page.</p>
+    <h1>Our Creators Portfolio</h1>
+<section class="portfolio-images"> 
+    <img src="{% static 'images/album.webp' %}" class="rounded float-start" alt="...">
+    <img src="{% static 'images/album.webp' %}" class="rounded float-end" alt="...">
+    <img src="{% static 'images/album.webp' %}" class="rounded float-start" alt="...">
+    <img src="{% static 'images/album.webp' %}" class="rounded float-end" alt="...">
+</section> 
+
 {% endblock %}

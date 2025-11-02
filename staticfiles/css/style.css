@@ -19,6 +19,10 @@ body, p, a, li {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   /* background: red !important; */
   background-color: #f9f9f9;
   color: #333;
@@ -248,6 +252,14 @@ body {
 
 .apply form button:hover {
   background: #0056b3;
+}
+
+.footer { 
+  position: relative; /*position, left and bottom - make the footer stay at the bottom*/
+  left: 0;
+  bottom: 0;
+  margin-top: auto;
+  width:100%;
 }
 
 
