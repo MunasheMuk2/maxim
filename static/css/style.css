@@ -238,14 +238,14 @@ body {
   background: #0056b3;
 }
 
-/* 
+
 @media(max-width:768px){
   .photo-gallery{
-    flex-direction: column;
-  } */
+    flex-direction: column !important;
+  }
 
   .nav-image {
-    height: auto;
+    height: auto !important;
     
 }
 }
