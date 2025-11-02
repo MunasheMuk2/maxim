@@ -53,6 +53,11 @@ body {
   text-align:center;
 
 }
+
+.container h3{
+  text-align:center;
+}
+
 .container {
   max-width: 1224px;
   width: 90%;
@@ -147,6 +152,14 @@ body {
 .categories {
   padding: 60px 20px;
   text-align: center;
+}
+
+.grid img {
+  width: 200px;
+  aspect-ratio: 4 / 5; Adjust as needed   /* Taken from MDN docs*/
+  object-fit: cover;
+  border-radius: 12px; /* optional */
+  display: block;
 }
 
 .categories h3 {
