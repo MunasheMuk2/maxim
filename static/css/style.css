@@ -194,6 +194,9 @@ body {
 }
 
 /* Apply form  */
+.creators{
+  text-align:center;
+}
 
 .apply {
   max-width: 600px;
@@ -262,6 +265,82 @@ body {
   width:100%;
 }
 
+/* Portfolio page */
+/* Masonry layout using CSS columns */
+.masonry-gallery {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 1200px) {
+  .masonry-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+/* Individual image blocks */
+.portfolio-item {
+  position: relative;
+  margin-bottom: 20px;
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* The image itself */
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Floating download icon */
+.download-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.download-icon:hover {
+  background-color: #eee;
+}
+
+.download-icon:hover {
+  background-color: #f0f0f0;
+}
+
+.download{
+  font-size: 0.9rem; 
+  color: gray; 
+  margin-bottom: 10px;
+
+}
 
 @media(max-width:768px){
   .photo-gallery{
