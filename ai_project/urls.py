@@ -23,4 +23,5 @@ urlpatterns = [
     path("accounts/", include("allauth.urls")),
     path("", index, name="home"),
     path("portfolio/", include("portfolio.urls")),
+    path("contact/", include("contact.urls")),
 ]
