@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* General Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3 {
+  font-family: 'Inter', sans-serif;
+}
+
+body, p, a, li {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* background: red !important; */
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Nav image - banner image below navigation bar */
+.nav-image-wrapper {
+    width: 100%;
+    text-align: center;  /* centers image if not full width */
+}
+
+.nav-image {
+    max-width: 100%;
+    height: 600px !important;
+    display: inline-block;
+}
+
+.main-header{
+  font-size: 70px;
+}
+
+.main-header span {
+  font-weight: bold;
+}
+
+.main-content {
+  text-align:center;
+}
+
+
+.featured h3 {
+  text-align:center;
+
+}
+
+.container h3{
+  text-align:center;
+}
+
+.container {
+  max-width: 1224px;
+  width: 90%;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.photo-gallery img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Pricing Section */
+.pricing {
+  padding: 60px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.pricing h3 {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.plan {
+  background: #fff;
+  padding: 70px 40px;
+  border-radius: 12px;
+  border: 2px solid black; 
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.plan:hover {
+  border-color: #333;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.plan h4 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.plan p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* CTA Buttons */
+.plan button {
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.plan button:hover {
+  background: grey;
+  transform: scale(1.05);
+}
+
+.grid{
+  width:100%;
+}
+
+/* Categories Section */
+.categories {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.grid img {
+  width: 200px;
+  aspect-ratio: 4 / 5; Adjust as needed   /* Taken from MDN docs*/
+  object-fit: cover;
+  border-radius: 12px; /* optional */
+  display: block;
+}
+
+.categories h3 {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.categories .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.categories .grid img {
+  width: 100%;       /* fill the grid cell */
+  height: auto;      /* keep aspect ratio */
+  border-radius: 12px;
+  object-fit: cover; /* crop instead of stretch */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.categories .grid img:hover {
+  transform: scale(1.05); /* nice hover zoom */
+}
+
+/* Apply form  */
+.creators{
+  text-align:center;
+}
+
+.apply {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.apply h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Form inputs */
+.apply form input,
+.apply form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.apply form input:focus,
+.apply form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+/* Textarea */
+.apply form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Button */
+.apply form button {
+  display: block;
+  width: 30%;
+  padding: 10px;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin:auto;
+}
+
+.apply form button:hover {
+  background: #0056b3;
+}
+
+.footer { 
+  position: relative; /*position, left and bottom - make the footer stay at the bottom*/
+  left: 0;
+  bottom: 0;
+  margin-top: auto;
+  width:100%;
+  background-color: #111;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+/* Portfolio page */
+/* Masonry layout using CSS columns */
+.masonry-gallery {
+  column-count: 4;
+  column-gap: 20px;
+  padding: 20px;
+}
+
+
+/* Contact us  */
+
+.contact-container p {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-container{
+  color:black;
+  border-radius: 15px;
+  border: 2px solid black;
+  padding:20px 20px 20px 20px;
+  font-size:15px; 
+  margin: 40px auto;
+  max-width: 600px;
+}
+
+
+.contact-form {
+  text-align:center;
+}
+
+.form-group{
+  text-align:center;
+  margin-bottom:10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: white;
+  color: #black;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  padding: 10px 10px 10px 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color:white;
+  color:black;
+}
+
+@media (max-width: 1200px) {
+  .masonry-gallery {
+    column-count: 3;
+  }
+}
+
+@media (max-width: 900px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+/* Individual image blocks */
+.portfolio-item {
+  position: relative;
+  margin-bottom: 20px;
+  break-inside: avoid;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+/* The image itself */
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Floating download icon */
+.download-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.download-icon:hover {
+  background-color: #eee;
+}
+
+.download-icon:hover {
+  background-color: #f0f0f0;
+}
+
+.download{
+  font-size: 0.9rem; 
+  color: gray; 
+  margin-bottom: 10px;
+
+}
+
+@media(max-width:768px){
+  .photo-gallery{
+    flex-direction: column !important;
+  }
+
+  .nav-image {
+    height: auto !important;
+    
+}
+}

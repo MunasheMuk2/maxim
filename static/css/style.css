@@ -291,6 +291,34 @@ body {
   padding: 20px;
 }
 
+.accordion {
+  border:5px solid black;
+  background-color:black;
+  color:white;
+  width:100%;
+  text-align:left;
+
+}
+
+.panel{
+display:none;
+}
+
+/* code amended from W3schools */
+
+.accordion::after {
+content: "+"; /* To show plus sign originally */
+float: right;
+margin-left: 10px;
+font-size: 20px;
+}
+
+/* When active */
+.accordion.active::after {
+content: "−"; /* Changes to minus when clicked due to the function in javascript */
+}
+
+
 
 /* Contact us  */
 
@@ -325,7 +353,7 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   background-color: white;
-  color: #fff;
+  color: #black;
   font-size: 1rem;
 }
 
