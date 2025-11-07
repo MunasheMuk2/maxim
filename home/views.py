@@ -1,11 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
-from .forms import CreatorApplicationForm
-
-
-# Create your views here.
-def index(request):
-    return render(request, "index.html")
+from .models import CreatorApplication
 
 
 def index(request):
@@ -16,7 +11,10 @@ def index(request):
         message_text = request.POST.get("message")
 
         CreatorApplication.objects.create(
-            name=name, email=email, speciality=speciality, message=message_text
+            name=name,
+            email=email,
+            speciality=speciality,
+            message=message_text,
         )
 
         messages.success(request, "Thank you! Your application has been received.")
