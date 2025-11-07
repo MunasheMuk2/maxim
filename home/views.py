@@ -4,3 +4,20 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     return render(request, "index.html")
+
+
+def index(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        speciality = request.POST.get("speciality")
+        message_text = request.POST.get("message")
+
+        CreatorApplication.objects.create(
+            name=name, email=email, speciality=speciality, message=message_text
+        )
+
+        messages.success(request, "Thank you! Your application has been received.")
+        return redirect("index")
+
+    return render(request, "index.html")
