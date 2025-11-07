@@ -108,6 +108,13 @@ Ready to elevate your brand, story, or product. </p> <br>
 <!-- Creator Application -->
 <section class="apply">
     <h3>Apply to be a creator.</h3>
+
+    {% if messages %}
+    {% for message in messages %}
+      <p class="message">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+  
     <form method="post">
         {% csrf_token %}
         <input type="text" name="name" placeholder="Name">
