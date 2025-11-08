@@ -144,7 +144,7 @@ body {
 }
 
 .plan button:hover {
-  background: grey;
+  background: #0056b3;
   transform: scale(1.05);
 }
 
