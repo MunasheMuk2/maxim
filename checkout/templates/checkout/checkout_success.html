@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="success-message">
+    <h1>Thank you for your purchase!</h1>
+    <p>Your subscription is now active. Enjoy your exclusive content.</p>
+    <a href="{% url 'home' %}">Go back to homepage</a>
+  </div>
+{% endblock %}

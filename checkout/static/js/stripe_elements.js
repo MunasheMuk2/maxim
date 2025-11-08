@@ -1,0 +1,33 @@
+document.addEventListener("DOMContentLoaded", async () => {
+    const stripe = Stripe("your_test_publishable_key_here");
+  
+    const elements = stripe.elements();
+    const card = elements.create("card");
+    card.mount("#card-element");
+  
+    const form = document.getElementById("payment-form");
+    const clientSecret = form.dataset.secret;
+  
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+  
+      const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: card,
+          billing_details: {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            address: {
+              line1: document.getElementById("address").value,
+            },
+          },
+        },
+      });
+  
+      if (error) {
+        document.getElementById("card-errors").textContent = error.message;
+      } else {
+        window.location.href = "/checkout/success/";
+      }
+    });
+  });

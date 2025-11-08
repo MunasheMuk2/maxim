@@ -10,6 +10,14 @@ from django.contrib.auth.decorators import login_required
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
+def checkout_page(request):
+    return render(request, "checkout/checkout.html")
+
+
+def checkout_success(request):
+    return render(request, "checkout/checkout_success.html")
+
+
 @login_required
 def creator_checkout(request):
     intent = stripe.PaymentIntent.create(
