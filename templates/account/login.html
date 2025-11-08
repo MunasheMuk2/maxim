@@ -1,20 +1,25 @@
-{% extends "account/base_entrance.html" %}
+{% extends "base.html" %}
 {% load static %}
 {% load i18n %}
 {% load allauth account %}
+
+{% block nav_image %}
+<!-- Intentionally left empty to hide the nav image -->
+{% endblock %}
 
 {% block head_title %}
     {% trans "Sign In" %}
 {% endblock head_title %}
 
+
 {% block content %}
   <div class="login-container">
-    <h1>{% trans "Sign In" %}</h1>
+     <h1>{% trans "Sign In" %}</h1>
 
     {% if not SOCIALACCOUNT_ONLY %}
       <p class="signup-redirect">
         {% blocktranslate %}If you have not created an account yet, please <a href="{{ signup_url }}">sign up</a> first.{% endblocktranslate %}
-      </p>
+      </p>  
 
       {% url 'account_login' as login_url %}
       <form method="post" action="{{ login_url }}">
