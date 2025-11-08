@@ -97,17 +97,22 @@ Ready to elevate your brand, story, or product. </p> <br>
       </form>
     </div>
 
-    
-        <div class="plan">
-            <h4>Pro Access</h4>
-            <p>£39/month</p>
-            <ul> 
-              <li>5 custom requests per month </li> 
-              <li> Faster turn around </li> 
-              <li>Free pre-made premium visuals</li> 
-            </ul> 
-            <button>Subscribe</button>
-        </div>
+
+     <!-- Pro Access -->
+    <div class="plan">
+      <h4>Pro Access</h4>
+      <p>£39/month</p>
+      <ul> 
+        <li>5 custom image requests per month</li> 
+        <li>Priority turnaround time</li> 
+        <li>Access to pre-made premium visuals</li> 
+      </ul> 
+      <form action="{% url 'checkout:pro_checkout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+
     </div>
 </section>
 
