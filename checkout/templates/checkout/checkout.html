@@ -1,6 +1,11 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block nav_image %}
+<!-- Intentionally left empty to hide the nav image -->
+{% endblock %}
+
+
 {% block extra_head %}
   <link rel="stylesheet" href="{% static 'css/checkout.css' %}">
   <script src="https://js.stripe.com/v3/"></script>
