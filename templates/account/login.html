@@ -3,6 +3,11 @@
 {% load i18n %}
 {% load allauth account %}
 
+
+{% block extra_head %}
+  <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
+
 {% block nav_image %}
 <!-- Intentionally left empty to hide the nav image -->
 {% endblock %}
