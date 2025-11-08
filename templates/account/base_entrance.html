@@ -1,1 +1,6 @@
 {% extends "allauth/layouts/entrance.html" %}
+{% load static %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
+{% endblock %}
