@@ -57,7 +57,8 @@ body {
 }
 
 .logout-container button:hover {
-  background-color: #444;
+  background-color: black;
+  color:white;
 }
 
 
@@ -95,7 +96,7 @@ body {
 }
 
 .btn-submit {
-  background-color: #2d89e5;
+  /* background-color: black;; */
   color: white;
   padding: 12px;
   font-size: 16px;
@@ -106,7 +107,7 @@ body {
 }
 
 .btn-submit:hover {
-  background-color: #1a5db4;
+  background-color: black;
 }
 
 .auth-redirect {
