@@ -26,4 +26,5 @@ urlpatterns = [
     path("contact/", include("contact.urls")),
     path("faq/", include("faq.urls")),
     path("", include("home.urls")),
+    path("checkout/", include("checkout.urls", namespace="checkout")),
 ]
