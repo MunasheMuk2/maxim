@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    const stripe = Stripe("your_test_publishable_key_here");
+    const stripe = Stripe(stripePublishableKey);
   
     const elements = stripe.elements();
     const card = elements.create("card");

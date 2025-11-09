@@ -30,6 +30,7 @@ def creator_checkout(request):
         "checkout/checkout.html",
         {
             "client_secret": intent.client_secret,
+            "stripe_publishable_key": settings.STRIPE_PUBLISHABLE_KEY,
         },
     )
 
@@ -46,5 +47,6 @@ def pro_checkout(request):
         "checkout/checkout.html",
         {
             "client_secret": intent.client_secret,
+            "stripe_publishable_key": settings.STRIPE_PUBLISHABLE_KEY,
         },
     )
