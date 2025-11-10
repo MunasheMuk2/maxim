@@ -14,7 +14,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # --- Security ---
 SECRET_KEY = os.environ.get("SECRET_KEY", "your-default-secret-key")
-DEBUG = True  # Set to True only during development
+DEBUG = False  # Set to True only during development
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".herokuapp.com"]
 
 INSTALLED_APPS = [
