@@ -16,5 +16,6 @@ urlpatterns = [
     path("faq/", include("faq.urls")),
     path("", include("home.urls")),
     # Checkout / Payments
-    path("checkout/", include(("checkout.urls", "checkout"), namespace="checkout")),
+    path("checkout/", include("checkout.urls", namespace="checkout")),
+    path("user/", include("accounts.urls")),
 ]

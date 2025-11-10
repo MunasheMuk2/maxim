@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container mt-5">
+    <h1>Welcome to Your Premium Dashboard</h1>
+    <p>Plan: {{ user.userprofile.subscription_level|title }}</p>
+    <p>Custom Requests Remaining: {{ user.userprofile.custom_requests_remaining }}</p>
+  </div>
+{% endblock %}

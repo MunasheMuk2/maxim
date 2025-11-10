@@ -3,10 +3,10 @@ import os
 import dj_database_url
 from dotenv import load_dotenv
 
-# Load environment variables
+# --- Load environment variables ---
 load_dotenv()
 if os.path.exists("env.py"):
-    import env  # fallback
+    import env  # fallback for local development
 
 # --- Base Directory ---
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -14,10 +14,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # --- Security ---
 SECRET_KEY = os.environ.get("SECRET_KEY", "your-default-secret-key")
-DEBUG = False  # Set to True only during development
+DEBUG = True  # Set to True only during development
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".herokuapp.com"]
 
-# --- Installed Apps ---
 INSTALLED_APPS = [
     # Django apps
     "django.contrib.admin",
@@ -65,7 +64,7 @@ TEMPLATES = [
         "OPTIONS": {
             "context_processors": [
                 "django.template.context_processors.debug",
-                "django.template.context_processors.request",  # required by allauth
+                "django.template.context_processors.request",  # Required by allauth
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
             ],
@@ -77,12 +76,16 @@ TEMPLATES = [
 WSGI_APPLICATION = "ai_project.wsgi.application"
 
 # --- Database ---
-DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+DATABASES = {
+    "default": dj_database_url.parse(
+        os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")
+    )
+}
 
 # --- Password Validation ---
 AUTH_PASSWORD_VALIDATORS = [
     {
-        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
     },
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
