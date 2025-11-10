@@ -17,3 +17,13 @@ class UserProfile(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.subscription_level}"
+
+
+class CustomRequest(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    message = models.TextField()
+    image = models.ImageField(upload_to="custom_requests/", blank=True, null=True)
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"Request by {self.user.username} at {self.submitted_at.strftime('%Y-%m-%d %H:%M')}"
