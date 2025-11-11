@@ -6,9 +6,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     # Authentication
     path("accounts/", include("allauth.urls")),  # Django Allauth
-    path(
-        "user/", include("accounts.urls")
-    ),  # Custom account routes (e.g., premium dashboard)
     # Core Pages
     path("", index, name="home"),
     path("portfolio/", include("portfolio.urls")),
@@ -18,4 +15,5 @@ urlpatterns = [
     # Checkout / Payments
     path("checkout/", include("checkout.urls", namespace="checkout")),
     path("user/", include("accounts.urls")),
+    path("accounts/", include("accounts.urls")),
 ]

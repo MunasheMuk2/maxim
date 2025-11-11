@@ -17,10 +17,9 @@
     />
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    
-    {% block extra_head %}
-    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+
+    {% block extra_head %} {% endblock %}
 
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
@@ -44,54 +43,52 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'home' %}"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'portfolio' %}"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'portfolio' %}"
                   >Portfolio</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'faq' %}">FAQ</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'faq' %}"
+                  >FAQ</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'contact' %}"
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="{% url 'contact' %}"
                   >Contact us</a
                 >
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == logout_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'account_logout' %}"
-                  >Logout</a
-                >
-              </li>
-              {% else %}
-              <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == signup_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'account_signup' %}"
-                  >Register</a
-                >
+                <a class="nav-link" href="{% url 'premium_content' %}">Premium Dashboard</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == login_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'account_login' %}"
-                  >Login</a
-                >
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
               </li>
-              {% endif %}
-
-              {% if user.is_authenticated and user.userprofile.subscription_level in "creator,pro" %}
-    <li class="nav-item">
-        <a class="nav-link" href="{% url 'premium_content' %}">Premium Dashboard</a>
-    </li>
-{% endif %}
+            {% else %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+              </li>
+            {% endif %}
             </ul>
             <button class="btn btn-outline-dark" type="submit">
               SUBSCRIBE
@@ -110,16 +107,10 @@
         />
       </div>
       {% endblock %}
-
     </header>
 
     <!-- Page content -->
-    <main>{% block content %}
-        {% endblock %}</main>
-
-        {% if user.is_authenticated and user.userprofile.subscription_level in "creator,pro" %}
-        <li><a href="{% url 'checkout:premium_content' %}">Premium Dashboard</a></li>
-    {% endif %}
+    <main>{% block content %} {% endblock %}</main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -133,7 +124,10 @@
     </footer>
 
     <!-- Fontawesome-->
-    <script src="https://kit.fontawesome.com/a08d6427c7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/a08d6427c7.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Bootstrap JS Bundle -->
     <script
@@ -141,8 +135,6 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-
-  
 
     <!-- Custom JS -->
     <script src="{% static 'js/script.js' %}"></script>

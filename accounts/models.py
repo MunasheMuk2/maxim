@@ -11,7 +11,10 @@ class UserProfile(models.Model):
 
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     subscription_level = models.CharField(
-        max_length=20, choices=SUBSCRIPTION_CHOICES, default="free"
+        max_length=20,
+        choices=SUBSCRIPTION_CHOICES,
+        default="free",
+        help_text="Subscription type",
     )
     custom_requests_remaining = models.PositiveIntegerField(default=0)
 

@@ -66,52 +66,56 @@ Ready to elevate your brand, story, or product. </p> <br>
   </div>
 </div>
 
-
 <!-- Pricing -->
 <section class="pricing">
-  <h3> Produce product visuals, fast.</h3> 
-    <p> All you need is a few snapshots of your product. With Kive's Custom AI models you can produce beautiful visuals of your own products, no PhD required.
-    </p> <br> 
-    <h3> Select a Plan </h3>
-        <!-- Free Plan -->
-    <div class="plan">
-      <h4>Free</h4>
-      <p>£0/month</p>
-      <ul> 
-        <li>Free downloadable limited content</li> 
-      </ul> 
-      <button onclick="location.href='{% url 'portfolio' %}'">Get Started</button>
-    </div>
+  <h3>Produce product visuals, fast.</h3>
+  <p>
+    All you need is a few snapshots of your product. With Maxim Cypher’s Custom AI models,
+    you can produce beautiful visuals of your own products—no PhD required.
+  </p>
+  <br>
+  <h3>Select a Plan</h3>
 
-    <!-- Creator Access -->
-    <div class="plan">
-      <h4>Creator Access</h4>
-      <p>£20/month</p>
-      <ul> 
-        <li>3 custom image requests per month</li> 
-        <li>Access to pre-made premium visuals</li> 
-      </ul> 
-      <form action="{% url 'checkout:creator_checkout' %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+  <!-- Free Plan -->
+  <div class="plan">
+    <h4>Free</h4>
+    <p>£0/month</p>
+    <ul>
+      <li>Free downloadable limited content</li>
+    </ul>
+    <a href="{% url 'portfolio' %}">
+      <button>Get Started</button>
+    </a>
+  </div>
 
+  <!-- Creator Access -->
+  <div class="plan">
+    <h4>Creator Access</h4>
+    <p>£20/month</p>
+    <ul>
+      <li>3 custom image requests per month</li>
+      <li>Access to pre-made premium visuals</li>
+    </ul>
+    <a href="{% url 'create_checkout_session' 'creator' %}">
+      <button>Subscribe</button>
+    </a>
+  </div>
 
-     <!-- Pro Access -->
-    <div class="plan">
-      <h4>Pro Access</h4>
-      <p>£39/month</p>
-      <ul> 
-        <li>5 custom image requests per month</li> 
-        <li>Priority turnaround time</li> 
-        <li>Access to pre-made premium visuals</li> 
-      </ul> 
-      <form action="{% url 'checkout:pro_checkout' %}" method="post">
-        {% csrf_token %}
-        <button type="submit">Subscribe</button>
-      </form>
-    </div>
+  <!-- Pro Access -->
+  <div class="plan">
+    <h4>Pro Access</h4>
+    <p>£39/month</p>
+    <ul>
+      <li>5 custom image requests per month</li>
+      <li>Priority turnaround time</li>
+      <li>Access to pre-made premium visuals</li>
+    </ul>
+    <a href="{% url 'create_checkout_session' 'pro' %}">
+      <button>Subscribe</button>
+    </a>
+  </div>
+</section>
+
 
     </div>
 </section>
