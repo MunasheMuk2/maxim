@@ -30,8 +30,6 @@ INSTALLED_APPS = [
     "portfolio",
     "contact",
     "faq",
-    "checkout",
-    "accounts",
     # Auth apps
     "django.contrib.sites",
     "allauth",
