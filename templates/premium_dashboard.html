@@ -1,0 +1,12 @@
+<h2>Premium Dashboard</h2>
+<p>You have {{ remaining }} custom requests left this month.</p>
+
+{% if remaining > 0 %}
+  <form method="post">
+    {% csrf_token %}
+    <textarea name="description" placeholder="Describe your request..."></textarea>
+    <button type="submit">Submit</button>
+  </form>
+{% else %}
+  <p>You’ve used all your requests. Upgrade or wait for next month.</p>
+{% endif %}

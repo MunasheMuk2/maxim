@@ -40,63 +40,31 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+      
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="{% url 'home' %}"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="{% url 'portfolio' %}"
-                  >Portfolio</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="{% url 'faq' %}"
-                  >FAQ</a
-                >
-              </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="{% url 'contact' %}"
-                  >Contact us</a
-                >
-              </li>
+              <!-- Always visible -->
+              <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
+              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
+      
               {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == logout_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'account_logout' %}"
-                  >Logout</a
-                >
-              </li>
+                <!-- Authenticated user links -->
+                <li class="nav-item"><a class="nav-link" href="{% url 'account' %}">Account</a></li>
+                {% if user.plan != 'free' %}
+                  <li class="nav-item"><a class="nav-link" href="{% url 'premium_dashboard' %}">Premium Dashboard</a></li>
+                {% endif %}
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
               {% else %}
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_signup' %}"
-                  >Register</a
-                >
-              </li>
+                <!-- Guest links -->
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
               {% endif %}
             </ul>
-            <button class="btn btn-outline-dark" type="submit">
-              SUBSCRIBE
-            </button>
+      
+            <!-- CTA Button -->
+            <a href="#pricing"><button class="btn btn-outline-dark" type="button">SUBSCRIBE</button></a>
           </div>
         </div>
       </nav>

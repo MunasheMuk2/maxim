@@ -12,4 +12,8 @@ urlpatterns = [
     path("faq/", include("faq.urls")),
     # Allauth Authentication
     path("accounts/", include("allauth.urls")),
+    # Custom apps
+    path("user/", include("accounts.urls")),
+    path("checkout/", include("checkout.urls", namespace="checkout")),
+    path("premium/", include("premium.urls")),
 ]

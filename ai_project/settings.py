@@ -3,6 +3,9 @@ import os
 import dj_database_url
 from dotenv import load_dotenv
 
+if os.path.isfile("env.py"):
+    import env
+
 # --- Load environment variables ---
 load_dotenv()
 if os.path.exists("env.py"):
@@ -14,8 +17,11 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # --- Security ---
 SECRET_KEY = os.environ.get("SECRET_KEY", "your-default-secret-key")
-DEBUG = True  # Set to True only during development
+DEBUG = False  # Set to True only during development
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".herokuapp.com"]
+
+AUTH_USER_MODEL = "accounts.CustomUser"
+
 
 INSTALLED_APPS = [
     # Django apps
@@ -30,6 +36,9 @@ INSTALLED_APPS = [
     "portfolio",
     "contact",
     "faq",
+    "accounts",
+    "checkout",
+    "premium",
     # Auth apps
     "django.contrib.sites",
     "allauth",
@@ -53,6 +62,7 @@ MIDDLEWARE = [
 # --- URL Configuration ---
 ROOT_URLCONF = "ai_project.urls"
 
+
 # --- Templates ---
 TEMPLATES = [
     {
@@ -74,11 +84,8 @@ TEMPLATES = [
 WSGI_APPLICATION = "ai_project.wsgi.application"
 
 # --- Database ---
-DATABASES = {
-    "default": dj_database_url.parse(
-        os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")
-    )
-}
+DATABASES = {"default": dj_database_url.parse(os.environ.get("DATABASE_URL"))}
+
 
 # --- Password Validation ---
 AUTH_PASSWORD_VALIDATORS = [
