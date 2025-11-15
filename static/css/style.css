@@ -410,6 +410,11 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   letter-spacing: 0.5px;
 }
 
+.account-container p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
 
 @media (max-width: 1200px) {
   .masonry-gallery {
