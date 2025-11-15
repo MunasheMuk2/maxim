@@ -204,7 +204,7 @@ body {
 }
 
 .apply {
-  max-width: 90%;
+  max-width: 600px;
   margin: 60px auto;
   padding: 40px;
   background: #ffffff;
@@ -460,7 +460,6 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   .photo-gallery {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 15px;
-    background-color: red; /* TEST ONLY */
   }
 
   .nav-image {
@@ -474,6 +473,9 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   .container h3 {
     font-size: 1.4rem !important;
   }
+
+  .apply {
+    max-width: 90%;
 }
   
   /* Very small phones (iPhone SE, small Androids) */
