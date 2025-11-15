@@ -435,6 +435,12 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   transform: scale(1.03);
 }
 
+/* Space between buttons */
+.account-container a {
+  display: block;
+  margin-top: 10px;
+}
+
 @media (max-width: 1200px) {
   .masonry-gallery {
     column-count: 3;
