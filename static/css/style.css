@@ -5,6 +5,7 @@
 * {
   margin: 0;
   padding: 0;
+  max-width: 100%;
   box-sizing: border-box;
 }
 
@@ -203,7 +204,7 @@ body {
 }
 
 .apply {
-  max-width: 600px;
+  max-width: 90%;
   margin: 60px auto;
   padding: 40px;
   background: #ffffff;
@@ -486,4 +487,4 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
       font-size: 1.3rem;
     }
 }
-}
+
