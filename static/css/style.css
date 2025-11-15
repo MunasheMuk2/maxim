@@ -259,7 +259,9 @@ body {
 }
 
 .apply form button:hover {
-  background: #0056b3;
+  background: black;
+  color: white;
+  transform: scale(1.03);
 }
 
 .footer { 
