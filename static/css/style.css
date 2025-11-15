@@ -469,6 +469,14 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
     width: 100%;
   }
 
+  .account-container h2 {
+    font-size: 1.7rem;
+  }
+
+  .account-container p {
+    font-size: 1rem;
+  }
+
 }
 
 /* Individual image blocks */
