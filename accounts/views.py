@@ -22,12 +22,10 @@ def cancel_plan(request):
     user.plan = "free"
     user.custom_images_remaining = 0
     user.save()
-    return redirect("account_view")  # make sure this matches your URL name
+    return redirect("account")  # ✅ matches name in urls.py
 
 
 # 🚀 Upgrade to Pro (redirect to Stripe checkout)
 @login_required
 def upgrade_plan(request):
-    return redirect(
-        "checkout:pro_checkout"
-    )  # assumes you have this named route in checkout/urls.py
+    return redirect("checkout:pro_checkout")  # ✅ assumes checkout app is namespaced
