@@ -429,6 +429,11 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   width: 60%;
 }
 
+.account-container button:hover {
+  background: black;
+  color: white;
+}
+
 @media (max-width: 1200px) {
   .masonry-gallery {
     column-count: 3;
