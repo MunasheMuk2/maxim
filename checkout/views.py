@@ -12,7 +12,7 @@ def creator_checkout(request):
         payment_method_types=["card"],
         line_items=[
             {
-                "price": "price_1SRHkCBZ2HQQHPr7jdas3J5M",  # Replace with your Stripe price ID
+                "price": "price_1SRHkCBZ2HQQHPr7jdas3J5M",
                 "quantity": 1,
             }
         ],
@@ -30,7 +30,7 @@ def pro_checkout(request):
         payment_method_types=["card"],
         line_items=[
             {
-                "price": "price_1SRHkcBZ2HQQHPr7Pb7tV17U",  # Replace with your Stripe price ID
+                "price": "price_1SRHkcBZ2HQQHPr7Pb7tV17U",
                 "quantity": 1,
             }
         ],
