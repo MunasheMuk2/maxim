@@ -398,6 +398,9 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   background: #ffffff;
   border-radius: 12px;
   border: 2px solid black;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: #333
 }
 
 
