@@ -1,14 +1,40 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from .models import PremiumRequest
 
 
 @login_required
 def premium_dashboard(request):
-    if request.user.plan == "free":
+    user = request.user
+
+    if user.plan == "free":
         return redirect("account")
+
+    if request.method == "POST" and user.custom_images_remaining > 0:
+        title = request.POST.get("title")
+        description = request.POST.get("description")
+        category = request.POST.get("category")
+        priority = request.POST.get("priority")
+
+        # Save the request
+        PremiumRequest.objects.create(
+            user=user,
+            title=title,
+            description=description,
+            category=category,
+            priority=priority,
+        )
+
+        # Decrement quota
+        user.custom_images_remaining -= 1
+        user.save()
+
+        return redirect("premium_dashboard")  # or show a success message
 
     return render(
         request,
         "premium_dashboard.html",
-        {"remaining": request.user.custom_images_remaining},
+        {
+            "remaining": user.custom_images_remaining,
+        },
     )
