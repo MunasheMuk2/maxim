@@ -288,6 +288,10 @@ body {
   text-decoration: none;
 }
 
+#copyright{
+  margin-left:5px;
+}
+
 /* Portfolio page */
 /* Masonry layout using CSS columns */
 .masonry-gallery {
