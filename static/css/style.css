@@ -413,6 +413,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 .account-container p {
   font-size: 1.1rem;
   margin-bottom: 15px;
+  color: #444;
 }
 
 
