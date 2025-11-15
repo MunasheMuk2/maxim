@@ -459,6 +459,14 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   }
 }
 
+@media (max-width: 576px) {
+  .account-container {
+    padding: 25px;
+    margin: 40px 20px;
+  }
+
+}
+
 /* Individual image blocks */
 .portfolio-item {
   position: relative;
