@@ -403,6 +403,11 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   color: #333
 }
 
+.account-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 
 @media (max-width: 1200px) {
   .masonry-gallery {
