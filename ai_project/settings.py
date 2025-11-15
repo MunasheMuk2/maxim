@@ -107,9 +107,24 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 SITE_ID = 1
+LOGIN_URL = "login"
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_LOGOUT_REDIRECT_URL = "/"
 ACCOUNT_EMAIL_VERIFICATION = "none"
+
+LOGGING = {
+    "version": 1,
+    "disable_existing_loggers": False,
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+        },
+    },
+    "root": {
+        "handlers": ["console"],
+        "level": os.getenv("LOGGING_LEVEL", "WARNING"),
+    },
+}
 
 # --- Stripe ---
 STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
