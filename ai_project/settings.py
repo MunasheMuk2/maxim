@@ -17,7 +17,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 
 # --- Security ---
 SECRET_KEY = os.environ.get("SECRET_KEY", "your-default-secret-key")
-DEBUG = False  # Set to True only during development
+DEBUG = True  # Set to True only during development
 ALLOWED_HOSTS = ["127.0.0.1", "localhost", ".herokuapp.com"]
 
 AUTH_USER_MODEL = "accounts.CustomUser"
@@ -107,7 +107,7 @@ MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 SITE_ID = 1
-LOGIN_URL = "login"
+LOGIN_URL = "account_login"
 LOGIN_REDIRECT_URL = "/"
 ACCOUNT_LOGOUT_REDIRECT_URL = "/"
 ACCOUNT_EMAIL_VERIFICATION = "none"
