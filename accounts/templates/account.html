@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="account-container">
+    <h2>Your Account</h2>
+    <p><strong>Plan:</strong> {{ plan|capfirst }}</p>
+    <p><strong>Remaining Requests:</strong> {{ remaining }}</p>
+
+    {% if plan == 'creator' %}
+      <a href="{% url 'account_upgrade' %}">
+        <button>Upgrade to Pro</button>
+      </a>
+    {% endif %}
+
+    {% if plan != 'free' %}
+      <a href="{% url 'account_cancel' %}">
+        <button>Cancel Plan</button>
+      </a>
+    {% endif %}
+  </div>
+{% endblock %}
