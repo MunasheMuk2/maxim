@@ -80,6 +80,7 @@ body {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+  aspect-ratio: 1 / 1;  
   display: block;
 }
 
@@ -453,13 +454,36 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 
 }
 
-@media(max-width:768px){
-  .photo-gallery{
-    flex-direction: column !important;
+@media (max-width: 768px) {
+
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px;
+    background-color: red; /* TEST ONLY */
   }
 
   .nav-image {
     height: auto !important;
-    
+  }
+
+  .container {
+    padding: 20px 0 !important;
+  }
+
+  .container h3 {
+    font-size: 1.4rem !important;
+  }
+}
+  
+  /* Very small phones (iPhone SE, small Androids) */
+  @media (max-width: 480px) {
+    .photo-gallery {
+      grid-template-columns: 1fr; /* 1 column for small screens */
+      gap: 12px;
+    }
+  
+    .container h3 {
+      font-size: 1.3rem;
+    }
 }
 }
