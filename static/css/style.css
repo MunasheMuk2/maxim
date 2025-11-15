@@ -416,6 +416,11 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   color: #444;
 }
 
+.account-container button {
+  padding: 12px 20px;
+  margin: 10px auto;
+  border-radius: 8px;
+}
 
 @media (max-width: 1200px) {
   .masonry-gallery {
