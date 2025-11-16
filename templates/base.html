@@ -1,6 +1,4 @@
-{% url 'account_login' as login_url %} {% url 'account_signup' as signup_url %}
-{% url 'account_logout' as logout_url %} {% load static %}
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Maxim Cypher{% endblock %}</title>
 
-    {# Bootstrap CSS #}
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -16,11 +14,12 @@
       crossorigin="anonymous"
     />
 
-    {% load static %}
+    {% block extra_head %}{% endblock %}
 
-    {% block extra_head %} {% endblock %}
-
+    <!-- Your custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
+
   </head>
 
   <body>
