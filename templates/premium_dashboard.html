@@ -8,53 +8,45 @@
 
 {% block content %}
 
-<h2>Premium Dashboard</h2>
-<p>You have {{ remaining }} custom requests left this month.</p>
+<div class="premium-container">
+  <h2>Premium Dashboard</h2>
+  <p>You have {{ remaining }} custom requests left this month.</p>
 
-{% if remaining > 0 %}
-  <form method="post" enctype="multipart/form-data">
-    {% csrf_token %}
+  {% if remaining > 0 %}
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
 
-    <!-- Request Title -->
-    <label for="title">Request Title</label>
-    <input type="text" id="title" name="title" placeholder="Short title for your request..." required>
+      <label for="title">Request Title</label>
+      <input type="text" id="title" name="title" placeholder="Short title for your request..." required>
 
-    <!-- Description -->
-    <label for="description">Description</label>
-    <textarea id="description" name="description" placeholder="Describe your request in detail..." required></textarea>
+      <label for="description">Description</label>
+      <textarea id="description" name="description" placeholder="Describe your request in detail..." required></textarea>
 
-    <!-- File Uploads -->
-    <label for="attachments">Attachments</label>
-    <input 
-        type="file" 
-        id="attachments" 
-        name="attachments" 
-        multiple
-        accept=".jpg,.jpeg,.png,.gif,.pdf,.mp4,.mov,.zip,.txt,.docx,.xlsx"
-    >
+      <label for="attachments">Attachments</label>
+      <input type="file" id="attachments" name="attachments" multiple
+             accept=".jpg,.jpeg,.png,.gif,.pdf,.mp4,.mov,.zip,.txt,.docx,.xlsx">
 
-    <!-- Category (Optional) -->
-    <label for="category">Category</label>
-    <select id="category" name="category">
+      <label for="category">Category</label>
+      <select id="category" name="category">
         <option value="image">Image Generation</option>
         <option value="video">Video Generation</option>
         <option value="branding">Branding</option>
         <option value="other">Other</option>
-    </select>
+      </select>
 
-    <!-- Priority (Optional) -->
-    <label for="priority">Priority</label>
-    <select id="priority" name="priority">
+      <label for="priority">Priority</label>
+      <select id="priority" name="priority">
         <option value="normal">Normal</option>
         <option value="high">High</option>
-    </select>
+      </select>
 
-    <button type="submit">Submit Request</button>
-  </form>
+      <button type="submit">Submit Request</button>
+    </form>
 
-{% else %}
-  <p>You’ve used all your requests. Upgrade or wait for next month.</p>
-{% endif %}
+  {% else %}
+    <p>You’ve used all your requests. Upgrade or wait for next month.</p>
+  {% endif %}
+</div>
 
 <section class="masonry-gallery"> 
   <div class="portfolio-item">
