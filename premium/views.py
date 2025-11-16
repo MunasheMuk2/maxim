@@ -1,5 +1,6 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .models import PremiumRequest
 
 
@@ -29,7 +30,10 @@ def premium_dashboard(request):
         user.custom_images_remaining -= 1
         user.save()
 
-        return redirect("premium_dashboard")  # or show a success message
+        # ⭐ Add success message
+        messages.success(request, "Your request has been received! 🎉")
+
+        return redirect("premium_dashboard")
 
     return render(
         request,
