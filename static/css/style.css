@@ -462,6 +462,13 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   text-align: left;
 }
 
+.premium-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
 @media (max-width: 1200px) {
   .masonry-gallery {
     column-count: 3;
