@@ -489,6 +489,11 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   color: #222;
 }
 
+.premium-container textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
 @media (max-width: 1200px) {
   .masonry-gallery {
     column-count: 3;
