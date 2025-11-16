@@ -1,133 +1,397 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Maxim Cypher
 
-Welcome USER_NAME,
+Maxim Cypher is a **Full Stack Django platform** that allows users to generate AI-powered custom images and videos, browse free and premium media, and manage subscription plans with automated request limits.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The platform is designed for **content creators, businesses, marketers, and everyday users** who need reliable AI-generated content in a clean and modern UI.
 
-You can safely delete this README.md file or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **June 18, 2024**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py` if your Python file is named `app.py`, of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-By Default, Gitpod gives you superuser security privileges. Therefore, you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you, so do not share it. If you accidentally make it public, you can create a new one with _Regenerate API Key_.
-
-### Connecting your Mongo database
-
-- **Connect to Mongo CLI on a IDE**
-- navigate to your MongoDB Clusters Sandbox
-- click **"Connect"** button
-- select **"Connect with the MongoDB shell"**
-- select **"I have the mongo shell installed"**
-- choose **mongosh (2.0 or later)** for : **"Select your mongo shell version"**
-- choose option: **"Run your connection string in your command line"**
-- in the terminal, paste the copied code `mongo "mongodb+srv://<CLUSTER-NAME>.mongodb.net/<DBname>" --apiVersion 1 --username <USERNAME>`
-  - replace all `<angle-bracket>` keys with your own data
-- enter password _(will not echo **\*\*\*\*** on screen)_
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**June 18, 2024,** Add Mongo back into template
-
-**June 14, 2024,** Temporarily remove Mongo until the key issue is resolved
-
-**May 28 2024:** Fix Mongo and Links installs
-
-**April 26 2024:** Update node version to 16
-
-**September 20 2023:** Update Python version to 3.9.17.
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+👉 Live Site: [Deployment Link Here](https://maxim-1ca0e50f2935.herokuapp.com/)
 
 ---
 
-Happy coding!
-"# Trigger build" 
-"# Trigger rebuild" 
+## User Experience (UX)
+
+### User Stories
+
+**As a site user, I want to:**
+- Generate custom AI images or videos based on prompts.
+- Browse free image galleries without creating an account.
+- Upgrade to a Creator or Pro plan for premium access.
+- Track my remaining AI requests on my account dashboard.
+- Receive fast delivery (Creator: within 1 hour, Pro: within 30 minutes).
+- Request custom AI videos (10 seconds max on Pro plan).
+
+**As a site owner, I want to:**
+- Manage all custom requests via Django Admin.
+- Control user quotas and subscription plans.
+- Offer fast-tiered AI delivery times.
+- Maintain professional branding and responsive UI.
+- Ensure secure subscription billing via Stripe Checkout.
+
+---
+
+## Purpose & Value
+
+Maxim Cypher provides fast AI-generated media on demand for:
+- Businesses creating ads or marketing visuals
+- Content creators posting to social media
+- Marketing teams needing fast turnaround
+- Freelancers producing client assets
+- Anyone needing high-quality AI media quickly
+
+---
+
+## Branding
+
+### Colour Scheme
+- **Black** – modern, bold, high-contrast
+- **White** – clean readability
+- **Blue accents** – futuristic AI aesthetic
+
+### Typography
+- Modern **sans-serif fonts** for clarity
+- Clean UI-focused layout
+
+### Imagery
+- Free gallery images across the site
+- User-generated premium images/videos
+- AI branding visuals
+
+---
+
+## Project Features
+
+### 🧭 Navigation Bar
+- Sticky navbar across all pages
+- Links to: Home, Gallery, Pricing, Login/Register, Account
+- Shows Account + Logout only when logged in
+- Fully responsive with mobile hamburger menu
+
+### 🏠 Home Page
+**Features**
+- Hero banner introducing the platform
+- Buttons for “Generate” and “Pricing”
+- Highlights: Fast Delivery, AI-Powered, Subscription-Based
+- *Screenshot Placeholder*
+
+### 🖼️ Free Gallery Page
+**Features**
+- View images without login
+- Grid layout
+- Fully responsive
+- Search/filter options
+- *Screenshot Placeholder*
+
+### ⚙️ Custom AI Request Dashboard
+**Features**
+- Users can submit prompts for custom images or videos
+- Displays remaining request quota
+- Creator plan: ~1 hour delivery
+- Pro plan: ~30 minutes delivery
+- Videos limited to 10 seconds
+- *Screenshot Placeholder*
+
+### 💳 Subscription System (Stripe)
+**Features**
+- Creator & Pro subscription tiers
+- Stripe Checkout integration
+- Automatic redirects
+- Django tracks:
+  - User plan
+  - Remaining custom requests
+  - Cancel anytime
+- *Screenshot Placeholder*
+
+### 🧾 Account Page
+**Shows:**
+- Current plan
+- Remaining AI request count
+- Upgrade button (if Creator)
+- Cancel subscription button
+
+### 🛠️ Admin Panel
+**Admins can:**
+- View all user requests
+- Filter by user, category, priority, or date
+- View request details and timestamps
+- Delete or manage users
+
+---
+
+## CRUD Functionality
+
+| Area             | Create | Read | Update | Delete |
+|------------------|--------|------|--------|--------|
+| Users            | ✔      | ✔    | ✔      | ✔      |
+| Premium Requests | ✔      | ✔    | ✔      | ✔      |
+| Gallery Images   | ✔      | ✔    | ✔      | ✔      |
+
+---
+
+## Database Schema
+
+**User (Custom Fields)**
+- `plan` (free / creator / pro)
+- `custom_images_remaining` (Int)
+
+**PremiumRequest**
+- `user` (FK)
+- `title`
+- `description`
+- `category`
+- `priority`
+- `created_at`
+
+**GalleryImage**
+- `title`
+- `image_file`
+- `category`
+
+---
+
+## Development Process
+
+- **Version control**: Git & GitHub.  
+- **Commit messages**: Small, descriptive, documenting progress.  
+- **Process followed**:  
+  1. Planning (wireframes, schema design, UX goals).  
+  2. Setup (Django project, models, apps, templates).  
+  3. Implementation (CRUD, forms, feedback).  
+  4. Styling (CSS branding, responsive grid).  
+  5. Testing (manual and validation).  
+  6. Deployment (local + Heroku).  
+  7. Planned user flows  
+  8. Designed database schema  
+  9. Implemented authentication & Allauth  
+  10. Added subscription logic with Stripe  
+  11. Built premium request system 
+
+
+---
+
+### Solved bugs
+
+1. Although I had created a superuser locally, I had to recreate the superuser on heroku so the admin panel could show up.
+
+2. The booking form was showing an error like "Select a valid choice" for the package or time slot, even when the options looked right. Amended the packages to make sure they were in the data base, made sure the timeslots were being correctly passed into the form and updated mismatch between my local code and Heroku by updating  models and running migrations properly. (This issue came up because Heroku wasn't deployed on time—I had to wait for my GitHub Student Pack to get free credits for hosting).
+
+3. Had an issue with favicons not working with normal links in base.html and so had to use template tags.
+
+---
+
+### Unsolved bugs
+
+1. Attempted to have a pop up alert message when there is a duplicate booking but site kept generating a message on the booking for due to the Django auto generated message from errors. Had to resort to using javascript within the home.html where the form is selected to scroll to the form on error. However the issue with the pop up message still stands as won't work. 
+
+2. Issue with my bookings page showing an error in HTML checker regarding an aria label but there are no aria labels advised on the page or on login page etc. 
+---
+
+## Deployment
+
+### Local Deployment
+- git clone https://github.com/MunasheMuk2/maxim.git
+- cd maxim-cypher
+- python -m venv venv
+- venv\Scripts\activate
+- pip install -r requirements.txt
+- python manage.py migrate
+- python manage.py createsuperuser
+- python manage.py runserver
+
+---
+
+##  Remote Deployment (Heroku)
+
+- Deployed with **Heroku**, using **PostgreSQL** as the database.  
+- `Procfile` and `requirements.txt` included for deployment.  
+- Environment variables managed in **Heroku Config Vars**.  
+- `DEBUG = False` in production for security.  
+
+---
+
+## Security
+
+- Used **SECRET_KEY** 
+- `.gitignore` excludes sensitive files.  
+- `DEBUG` disabled in production.  
+
+---
+
+##  Credits
+
+- **Media**: Images sourced from [Unsplash](https://pixabay.com & generated images on https://sora.chatgpt.com/)  
+- **Code References**: code institute and youtube tutorials
+
+## Technologies Used
+
+- [VSCode](https://code.visualstudio.com/)  Used as the main code editor
+- [GitHub](https://github.com/) code host for the site
+- [W3schools](https://www.w3schools.com) 
+- Code institute tutorials for setting up models, apps, templates and heroku
+-**Favicons**: Sourced from [favicon](https://favicon.io/)
+---
+
+
+# Further testing
+
+## Compatibility
+
+In order to confirm the correct functionality, responsiveness, and appearance:
+
++ The website was tested on popular browsers : Chrome and Microsoft edge
+
+    - Chrome:
+
+    ![Chrome](screenshots/chrome.jpg)
+
+     - Microsoft Edge:
+
+    ![Microsoft Edge](screenshots/MicrosoftEdge.jpg)
+
+---
+
+## Responsiveness
+
+
++ Also checked the website's responsiveness in devtools - Chrome.
+
+    - Extra small devices:
+
+    ![XS devices](screenshots/small-devices.jpg)
+
+    ---
+
+    - Small devices:
+
+    ![Small devices](screenshots/smalldevices.jpg)
+
+    ---
+
+    - Medium devices:
+
+    ![Medium devices](screenshots/medium-devices.jpg)
+
+    ---
+    
+     - large/Xl devices:
+
+    ![Extra large devices](screenshots/largexl.jpg)
+---
+## Manual Testing (Maxim Cypher)
+
+### Site Users
+| User Story | Test Action | Expected Result | Status |
+|---|---|---|---|
+| Generate custom image | Submit an image request with a prompt | Request saved; remaining custom requests decreases | Yes |
+| Generate custom video | Submit a video request | Request saved | Yes |
+| View free gallery assets | Visit `/gallery` | Images load, responsive grid displays correctly | Yes |
+| Upgrade subscription | Visit `/account` → click Upgrade to Pro | Redirects to Stripe Checkout | Yes |
+| Cancel subscription | Visit `/account` → Cancel Plan | Plan resets to Free; remaining requests = 0 | Yes |
+| Track remaining requests | Visit `/account` | Correct custom requests left displayed for Free/Creator/Pro plans | Yes |
+| Authentication | Register → login → logout | All authentication flows work via Django-Allauth | Yes |
+| Smooth navigation | Use navbar on desktop/mobile | All links functional; mobile menu collapses properly | Yes |
+| Input validation | Submit custom request with empty prompt | Validation error displayed | Yes |
+
+---
+
+### Site Owner / Admin
+| User Story | Test Action | Expected Result | Status |
+|---|---|---|---|
+| Manage Creator Applications | Admin → Creator applications | View, approve, update, or delete creator applications | Yes |
+| Manage Premium Requests | Admin → Premium requests | View AI image/video requests, filter by user, delete | Yes |
+
+---
+
+## Functional Testing (Manual)
+
+### 1. Custom Request Form (Images & Videos)
+| Case | Steps | Expected | Result |
+|---|---|---|---|
+| Valid image request | Enter prompt → select “Image” → Submit | Request saved; quota decremented | Yes |
+| Valid video request (Pro) | Enter prompt → select “Video” → Submit | Request saved | Yes |
+| Missing prompt | Leave prompt empty → Submit | Error: “Prompt is required” | Yes |
+| Exceeded quota | Set quota = 0 → Submit | Error: “No requests remaining on your plan” | Yes |
+
+---
+
+### 2. Subscription System (Stripe)
+| Case | Steps | Expected | Result |
+|---|---|---|---|
+| Creator upgrade | `/account` → Upgrade → Stripe → Pay | Plan updates to Creator; quota added | Yes |
+| Pro upgrade | `/account` → Upgrade → Stripe → Pay | Plan updates to Pro; quota added | Yes |
+| Cancel plan | `/account` → Cancel Plan | Plan resets to Free; quota resets | Yes |
+
+---
+
+### 3. Authentication (Allauth)
+| Case | Steps | Expected Result | Status |
+|---|---|---|---|
+| Register new user | Sign up with email/password | Account created; auto-login | Yes |
+| Login existing user | Enter valid credentials | Login success | Yes |
+| Wrong password | Enter incorrect password | Error message shown | Yes |
+| Logout | Click “Logout” | Session ends; redirected to homepage | Yes |
+
+---
+
+## CRUD Coverage
+
+CRUD operations verified through both User Interface and Django Admin Panel.
+
+| Entity | Create | Read | Update | Delete | UI Reflection |
+|---|---|---|---|---|---|
+| Premium Requests | User/Admin create request | Admin views list | Admin updates status | Admin deletes request | Changes instantly visible on admin dashboard |
+| Creator Applications | User applies for creator → admin view | Admin reads app | Admin approves/denies | Admin deletes entries | Approval gives user Creator perks |
+| User Accounts | User registers; admin creates | Admin can view details | Admin edits plan/quota | Admin deletes user | Changes reflected on login/account pages |
+
+
+## Validator testing
+## HTML Validation
+
+#### Landing Page
+   
+![Landing Page HTML Validator](screenshots/htmlvalidator.jpg)
+
+- No errors or warnings were found when passing through the official W3C validator.
+
+---
+
+#### Services Page
+   
+![Services Page HTML Validator](screenshots/servicesvalidator.jpg)
+
+- No errors or warnings were found when passing through the official W3C validator.
+
+---
+
+#### Contact Page
+   
+![Contact Page HTML Validator](screenshots/contactusvalidator.jpg)
+
+- No errors or warnings were found when passing through the official W3C validator.
+
+---
+
+#### Booking Page
+   
+![Booking Page HTML Validator](screenshots/bookingvalidator.jpg)
+
+- No errors or warnings found relating to my bookings page - error for aria label descirbed is non existant. Checked all templates that include a login form, especially:`login.html` , `home.html` and `base.html` 
+ 
+---
++ ### CSS
+  No errors or warnings were found when passing through the official W3C (Jigsaw) validator 
+    ![CSS](screenshots/cssvalidator.jpg)
+
+---
+
++ ### JSHint
+
+ No errors or warnings were found when passing through the JS code in JSHint. 
+
+   ![JSHint](screenshots/jshint.jpg)
+
+---
+
+
+## Acknowledgments
+
+- [Code Institute](https://codeinstitute.net/) 
