@@ -476,6 +476,13 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   color: #444;
 }
 
+/* Form Styling */
+.premium-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
 @media (max-width: 1200px) {
   .masonry-gallery {
     column-count: 3;
