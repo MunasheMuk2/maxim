@@ -299,6 +299,15 @@ body {
 
 /* Portfolio page */
 /* Masonry layout using CSS columns */
+
+.portfolio-header {
+  margin-left:10px;
+}
+
+.masonry-gallery h3 {
+  display: none;
+}
+
 .masonry-gallery {
   column-count: 4;
   column-gap: 20px;
