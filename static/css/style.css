@@ -491,15 +491,21 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 
 /* Submit Button */
 .premium-container button {
-  padding: 12px;
-  background: black;
-  color: white;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 10px;
+  padding: 12px 20px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 2px solid black;
+  background: white;
+  font-size: 1rem;
   cursor: pointer;
-  margin-top: 10px;
   transition: 0.3s ease;
+  font-weight: 600;
+  width: 60%;
+}
+
+.premium-container button:hover {
+  background: #333;
+  transform: scale(1.03);
 }
 
 @media (max-width: 1200px) {
