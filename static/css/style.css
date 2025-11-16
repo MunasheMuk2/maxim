@@ -136,7 +136,8 @@ body {
 }
 
 /* CTA Buttons */
-.plan button {
+.plan a.btn-plan {
+  display: inline-block;
   color: black;
   padding: 10px 20px;
   border: none;
@@ -144,13 +145,14 @@ body {
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 500;
+  text-decoration: none;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.plan button:hover {
+.plan a.btn-plan:hover {
   background: black;
   transform: scale(1.05);
-  color:white;
+  color: white;
 }
 
 .grid{
