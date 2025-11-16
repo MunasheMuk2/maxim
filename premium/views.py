@@ -31,7 +31,7 @@ def premium_dashboard(request):
         user.save()
 
         # ⭐ Add success message
-        messages.success(request, "Your request has been received! 🎉")
+        messages.success(request, "Your request has been received!")
 
         return redirect("premium_dashboard")
 
