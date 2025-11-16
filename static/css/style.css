@@ -642,7 +642,37 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   .apply {
     max-width: 90%;
 }
+
+.questions {
+  margin-left:10px;
+  max-width: 90%;
+}
+
+.contact-container{
+  max-width: 90%;
+}
+
+.contact-header{
+  margin-left:10px;
+}
+
+.contact-paragraph{
+  margin-left:10px;
+}
+
+.portfolio-header{
+  margin-left:10px;
+}
+
+.portfolio-paragraph{
+  margin-left:10px;
+}
+
+.premium-container{
+  max-width: 90%;
+}
   
+}
   /* Very small phones (iPhone SE, small Androids) */
   @media (max-width: 480px) {
     .photo-gallery {
@@ -654,8 +684,5 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
       font-size: 1.3rem;
     }
 
-    .accordion {
-      margin:auto;
-    }
 }
 
