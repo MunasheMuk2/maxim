@@ -138,6 +138,8 @@ body {
 /* CTA Buttons */
 .plan a.btn-plan {
   display: inline-block;
+  border: 2px solid black;
+  background:white;
   color: black;
   padding: 10px 20px;
   border: none;
