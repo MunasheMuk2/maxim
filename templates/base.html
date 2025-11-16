@@ -20,6 +20,11 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
 
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
   </head>
 
   <body>
@@ -38,31 +43,55 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-      
+
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <!-- Always visible -->
-              <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'faq' %}">FAQ</a></li>
-              <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact us</a></li>
-      
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+              </li>
+
               {% if user.is_authenticated %}
-                <!-- Authenticated user links -->
-                <li class="nav-item"><a class="nav-link" href="{% url 'account' %}">Account</a></li>
-                {% if user.plan != 'free' %}
-                  <li class="nav-item"><a class="nav-link" href="{% url 'premium_dashboard' %}">Premium Dashboard</a></li>
-                {% endif %}
-                <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
+              <!-- Authenticated user links -->
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account' %}">Account</a>
+              </li>
+              {% if user.plan != 'free' %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'premium_dashboard' %}"
+                  >Premium Dashboard</a
+                >
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+              </li>
               {% else %}
-                <!-- Guest links -->
-                <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Login</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Register</a></li>
+              <!-- Guest links -->
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}"
+                  >Register</a
+                >
+              </li>
               {% endif %}
             </ul>
-      
+
             <!-- CTA Button -->
-            <a href="{% url 'home' %}#pricing" class="btn btn-outline-dark">SUBSCRIBE</a>
+            <a href="{% url 'home' %}#pricing" class="btn btn-outline-dark"
+              >SUBSCRIBE</a
+            >
           </div>
         </div>
       </nav>
@@ -90,7 +119,7 @@
         <li><a href="{% url 'faq' %}">FAQ</a></li>
         <li><a href="{% url 'home' %}#pricing">Select a plan</a></li>
       </ul>
-      <p id = "copyright">&copy; 2025 Maxim Cypher</p>
+      <p id="copyright">&copy; 2025 Maxim Cypher</p>
     </footer>
 
     <!-- Fontawesome-->
