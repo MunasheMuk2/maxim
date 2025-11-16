@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Maxim Cypher{% endblock %}</title>
 
     <!-- Bootstrap CSS -->
@@ -12,15 +12,14 @@
       rel="stylesheet"
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
-    />
+    >
 
     {% block extra_head %}{% endblock %}
 
     <!-- Your custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-    <link rel="stylesheet" href="{% static 'css/auth.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
 
-    <!-- Favicons -->
     <!-- Favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicons/apple-touch-icon.png' %}">
     <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicons/favicon-32x32.png' %}">
@@ -48,7 +47,7 @@
 
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <!-- Always visible -->
+
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}">Home</a>
               </li>
@@ -63,57 +62,45 @@
               </li>
 
               {% if user.is_authenticated %}
-              <!-- Authenticated user links -->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account' %}">Account</a>
               </li>
               {% if user.plan != 'free' %}
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'premium_dashboard' %}"
-                  >Premium Dashboard</a
-                >
+                <a class="nav-link" href="{% url 'premium_dashboard' %}">Premium Dashboard</a>
               </li>
               {% endif %}
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
               </li>
               {% else %}
-              <!-- Guest links -->
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_login' %}">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_signup' %}"
-                  >Register</a
-                >
+                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
               </li>
               {% endif %}
             </ul>
 
-            <!-- CTA Button -->
-            <a href="{% url 'home' %}#pricing" class="btn btn-outline-dark"
-              >SUBSCRIBE</a
-            >
+            <a href="{% url 'home' %}#pricing" class="btn btn-outline-dark">SUBSCRIBE</a>
           </div>
         </div>
       </nav>
 
-      <!-- OPTIONAL NAV IMAGE -->
       {% block nav_image %}
       <div class="nav-image-wrapper">
         <img
           src="{% static 'images/nav.jpg' %}"
           alt="sea water wave swirl"
           class="nav-image"
-        />
+        >
       </div>
       {% endblock %}
     </header>
 
-    <!-- Page content -->
     <main>{% block content %} {% endblock %}</main>
 
-    <!-- Footer -->
     <footer class="footer">
       <ul>
         <li><a href="{% url 'home' %}">Home</a></li>
