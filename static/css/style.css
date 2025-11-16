@@ -574,12 +574,6 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
     font-size: 1rem;
   }
 
-  .premium-container button {
-    width: 90%;
-    padding: 10px 16px;
-    font-size: 0.9rem;
-  }
-
 }
 
 /* Individual image blocks */
@@ -695,6 +689,12 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   
     .container h3 {
       font-size: 1.3rem;
+    }
+
+    .premium-container button {
+      padding: 8px 14px;     /* smaller padding */
+      font-size: 0.85rem;    /* smaller text */
+      border-width: 1.5px;   /* slightly thinner border */
     }
 
 }
