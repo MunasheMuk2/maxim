@@ -489,6 +489,11 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   color: #222;
 }
 
+.premium-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
 /* Submit Button */
 .premium-container button {
   padding: 12px 20px;
