@@ -1,61 +1,80 @@
-{% extends 'base.html' %}
-{% load static %}
-{% block title %}FAQ | Maxim Cypher{% endblock %}
-
-{% block nav_image %}
+{% extends 'base.html' %} {% load static %} {% block title %}FAQ | Maxim
+Cypher{% endblock %} {% block nav_image %}
 <!-- Intentionally left empty to hide the nav image -->
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 <h1 class="faq-header">FAQ</h1>
 <p class="faq-paragraph">Please see the most asked questions below</p>
 <!-- Add your faq info here -->
 
 <section class="questions">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <!-- Frequently asked questions and answers section-->
-        <div class="faq">
-          <button class="accordion">What is Maxim Cypher?</button>
-          <div class="panel">
-            <p>
-                Maxim Cypher is a creative platform where users can explore, download, and share AI-generated visuals and designs. It's built to inspire digital creators and streamline their creative workflow.
-            </p>
-          </div>
-          <button class="accordion">Are the images really free to use?</button>
-          <div class="panel">
-            <p>
-                Many of our images are free to download and use for personal or commercial projects. However, access to premium or personalized AI-generated images requires a subscription plan. Subscribers receive exclusive content, higher-quality downloads, and the option to request custom visuals tailored to their needs.
-            </p>
-          </div>
-          <button class="accordion">
-            How can I download an image?
-          </button>
-          <div class="panel">
-            <p>
-                Simply click the download icon <i class="fas fa-download"></i> below any image to save it instantly to your device.
-            </p>
-          </div>
+  <h3 class="hidden-heading">Questions</h3>
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <!-- Frequently asked questions and answers section-->
+      <div class="faq">
+        <button class="accordion">What is Maxim Cypher?</button>
+        <div class="panel">
+          <p>
+            Maxim Cypher is a creative platform where users can explore,
+            download, and share AI-generated visuals and designs. It's built to
+            inspire digital creators and streamline their creative workflow.
+          </p>
+        </div>
+        <button class="accordion">Are the images really free to use?</button>
+        <div class="panel">
+          <p>
+            Many of our images are free to download and use for personal or
+            commercial projects. However, access to premium or personalized
+            AI-generated images requires a subscription plan. Subscribers
+            receive exclusive content, higher-quality downloads, and the option
+            to request custom visuals tailored to their needs.
+          </p>
+        </div>
+        <button class="accordion">How can I download an image?</button>
+        <div class="panel">
+          <p>
+            Simply click the download icon <i class="fas fa-download"></i> below
+            any image to save it instantly to your device.
+          </p>
+        </div>
 
-          <button class="accordion">
-            Who can use this platform?
-          </button>
-          <div class="panel">
-            <p>
-                Maxim Cypher is perfect for digital artists, prompt engineers, designers, marketers, and anyone interested in AI-generated creativity
-            </p>
-          </div>
-          <button class="accordion" id="third">
-            Do I need to create an account to use the site?
-          </button>
-          <div class="panel">
-            <p>
-              No account is required to browse or download. However, signing up and subscribing to one of our plans unlocks premium images and gives you the ability to request custom images and videos.
-            </p>
-          </div>
+        <button class="accordion">Who can use this platform?</button>
+        <div class="panel">
+          <p>
+            Maxim Cypher is perfect for digital artists, prompt engineers,
+            designers, marketers, and anyone interested in AI-generated
+            creativity
+          </p>
+        </div>
+        <button class="accordion">
+          How long will it take to receive my custom image or video on the
+          Creator or Pro subscription?
+        </button>
+        <div class="panel">
+          <p>
+            Custom image requests are delivered quickly: if you’re on the
+            <strong>Creator plan</strong>, you’ll receive your image within
+            <strong>1 hour</strong>. On the <strong>Pro plan</strong>, images
+            arrive even faster — typically within <strong>30 minutes</strong>.
+            <br /><br />
+            Please note: custom videos are <strong>10 seconds long</strong> and
+            may take a little extra time to process, but we work to deliver them
+            as fast as possible.y
+          </p>
+        </div>
+        <button class="accordion" id="third">
+          Do I need to create an account to use the site?
+        </button>
+        <div class="panel">
+          <p>
+            No account is required to browse or download. However, signing up
+            and subscribing to one of our plans unlocks premium images and gives
+            you the ability to request custom images and videos.
+          </p>
         </div>
       </div>
     </div>
-  </section>
-  
+  </div>
+</section>
+
 {% endblock %}
