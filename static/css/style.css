@@ -653,5 +653,9 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
     .container h3 {
       font-size: 1.3rem;
     }
+
+    .accordion {
+      margin:auto;
+    }
 }
 
