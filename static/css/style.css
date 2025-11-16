@@ -469,6 +469,13 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   font-weight: 700;
 }
 
+.premium-container p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
 @media (max-width: 1200px) {
   .masonry-gallery {
     column-count: 3;
