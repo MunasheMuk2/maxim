@@ -99,6 +99,14 @@
       {% endblock %}
     </header>
 
+    {% if messages %}
+  <div class="container mt-3">
+    {% for message in messages %}
+      <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+  </div>
+{% endif %}
+
     <main>{% block content %} {% endblock %}</main>
 
     <footer class="footer">
