@@ -2,7 +2,6 @@ from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 
-# 🧾 Show user account info
 @login_required
 def account_view(request):
     return render(
@@ -15,17 +14,17 @@ def account_view(request):
     )
 
 
-# ❌ Cancel current plan
+# Cancel current plan
 @login_required
 def cancel_plan(request):
     user = request.user
     user.plan = "free"
     user.custom_images_remaining = 0
     user.save()
-    return redirect("account")  # ✅ matches name in urls.py
+    return redirect("account")
 
 
-# 🚀 Upgrade to Pro (redirect to Stripe checkout)
+# Upgrade to Pro (redirect to Stripe checkout)
 @login_required
 def upgrade_plan(request):
-    return redirect("checkout:pro_checkout")  # ✅ assumes checkout app is namespaced
+    return redirect("checkout:pro_checkout")

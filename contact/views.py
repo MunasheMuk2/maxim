@@ -6,10 +6,6 @@ from .forms import ContactForm
 # Create your views here.
 
 
-# def contact_view(request):
-#     return render(request, "contact/contact.html")
-
-
 def contact_view(request):
     if request.method == "POST":
         form = ContactForm(request.POST)
