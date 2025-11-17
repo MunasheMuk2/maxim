@@ -133,14 +133,14 @@ Ready to elevate your brand, story, or product. </p> <br>
     {% endfor %}
   {% endif %}
 
-    <form method="post">
-        {% csrf_token %}
-        <input type="text" name="name" placeholder="Name">
-        <input type="email" name="email" placeholder="Email Address">
-        <input type="text" name="speciality" placeholder="Speciality">
-        <textarea name="message" placeholder="Message"></textarea>
-        <button type="submit">Join</button>
-    </form>
+  <form method="post">
+    {% csrf_token %}
+    <input type="text" name="name" placeholder="Name" required>
+    <input type="email" name="email" placeholder="Email Address" required>
+    <input type="text" name="speciality" placeholder="Speciality" required>
+    <textarea name="message" placeholder="Message" required></textarea>
+    <button type="submit">Join</button>
+</form>
 </section>
 
 {% endblock %}
