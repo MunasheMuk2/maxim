@@ -84,32 +84,32 @@ Maxim Cypher provides fast AI-generated media on demand for:
 
 ## Project Features
 
-### 🧭 Navigation Bar
+###  Navigation Bar
 - Navbar across all pages
 - Links to: Home, Potfolio, FAQ, Contact Us, Gallery, Pricing, Login/Register, Account & Premium Dashboaed
 - Shows Account + Logout only when logged in
 - Fully responsive with mobile hamburger menu
 
-### 🏠 Home Page
+###  Home Page
 **Features**
 -  Banner introducing the platform
 - Buttons for Subcription and Joining to be a creator
 - Highlights: AI-Powered, Subscription-Based
 
 
-### 🖼️ Free Gallery Page
+###  Free Gallery Page
 **Features**
 - View images without login
 - Grid layout
 - Fully responsive
 
 
-### ⚙️ Custom AI Request Dashboard
+###  Custom AI Request Dashboard
 **Features**
 - Users can submit prompts for custom images or videos
-- Displays remaining request quota
+- Displays remaining custom requests 
 
-### 💳 Subscription System (Stripe)
+###  Subscription System (Stripe)
 **Features**
 - Creator & Pro subscription tiers
 - Stripe Checkout integration
@@ -119,14 +119,15 @@ Maxim Cypher provides fast AI-generated media on demand for:
   - Remaining custom requests
   - Cancel anytime
 
-### 🧾 Account Page
+###  Account Page
 **Shows:**
 - Current plan
 - Remaining AI request count
 - Upgrade button (if Creator)
 - Cancel subscription button
 
-### 🛠️ Admin Panel
+###  Admin Panel
+![Landing Page HTML Validator](screenshots/django.jpg)
 **Admins can:**
 - View all user requests
 - Filter by user, category, priority, or date
@@ -158,10 +159,6 @@ Maxim Cypher provides fast AI-generated media on demand for:
 - `priority`
 - `created_at`
 
-**GalleryImage**
-- `title`
-- `image_file`
-- `category`
 
 ---
 
@@ -187,13 +184,32 @@ Maxim Cypher provides fast AI-generated media on demand for:
 
 ### Solved bugs
 
-1. he success message appeared on the homepage even when the user hadn’t submitted the form yet.The message was being shown in a global area and stayed there after the page refreshed.Moved the message so it only appears inside the form section and changed the redirect so the page scrolls back to the form.
+1. The success message appeared on the homepage even when the user hadn’t submitted the form yet.The message was being shown in a global area and stayed there after the page refreshed.Moved the message so it only appears inside the form section and changed the redirect so the page scrolls back to the form.
 
 ---
 
 ### Unsolved bugs
 
 1. High-resolution images cause longer initial page load.
+
+---
+###  Future Improvements Summary
+
+1. Free Video Library
+
+Add a public library of free AI-generated videos (watermarked or low-res) to attract new users.
+
+2. Premium Pre-Made Videos
+
+Create an exclusive premium video section where subscribers can download HD, professional visuals.
+
+3. Creator Upload System
+
+Allow approved creators to upload their own images and videos, with admin approval and creator profiles.
+
+4. AI Prompt Tools
+
+Offer “generate image/video from a prompt” features using AI APIs for premium users.
 
 ---
 
@@ -296,16 +312,16 @@ In order to confirm the correct functionality, responsiveness, and appearance:
 | Valid image request | Enter prompt → select “Image” → Submit | Request saved; quota decremented | Yes |
 | Valid video request (Pro) | Enter prompt → select “Video” → Submit | Request saved | Yes |
 | Missing prompt | Leave prompt empty → Submit | Error: “Prompt is required” | Yes |
-| Exceeded quota | Set quota = 0 → Submit | Error: “No requests remaining on your plan” | Yes |
+| Exceeded custom requests | Set customs requests = 0 → Submit | Error: “No requests remaining on your plan” | Yes |
 
 ---
 
 ### 2. Subscription System (Stripe)
 | Case | Steps | Expected | Result |
 |---|---|---|---|
-| Creator upgrade | `/account` → Upgrade → Stripe → Pay | Plan updates to Creator; quota added | Yes |
-| Pro upgrade | `/account` → Upgrade → Stripe → Pay | Plan updates to Pro; quota added | Yes |
-| Cancel plan | `/account` → Cancel Plan | Plan resets to Free; quota resets | Yes |
+| Creator upgrade | `/account` → Upgrade → Stripe → Pay | Plan updates to Creator; custom requests added | Yes |
+| Pro upgrade | `/account` → Upgrade → Stripe → Pay | Plan updates to Pro; requests added | Yes |
+| Cancel plan | `/account` → Cancel Plan | Plan resets to Free; requests resets | Yes |
 
 ---
 
