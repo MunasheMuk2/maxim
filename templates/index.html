@@ -127,14 +127,6 @@ Ready to elevate your brand, story, or product. </p> <br>
 <section class="apply" id="apply">
     <h3>Apply to be a creator.</h3>
 
-    {% if messages %}
-    <div class="container mt-3">
-      {% for message in messages %}
-        <div class="alert alert-info">{{ message }}</div>
-      {% endfor %}
-    </div>
-  {% endif %}
-
   <form method="post">
     {% csrf_token %}
     <input type="text" name="name" placeholder="Name" required>

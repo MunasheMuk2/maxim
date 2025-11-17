@@ -18,6 +18,6 @@ def index(request):
         )
 
         messages.success(request, "Thank you! Your application has been received.")
-        return redirect("/#apply")  # Redirect back to the form section
+        return redirect("home")
 
     return render(request, "index.html")
