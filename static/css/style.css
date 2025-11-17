@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* General Reset */
+/* Global style */
 
 * {
   margin: 0;
@@ -24,7 +24,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* background: red !important; */
   background-color: #f9f9f9;
   color: #333;
 }
@@ -41,6 +40,8 @@ body {
     display: inline-block;
 }
 
+/* Home page */
+
 .main-header{
   font-size: 70px;
 }
@@ -53,6 +54,7 @@ body {
   text-align:center;
 }
 
+/* Featured work homepage */
 
 .featured h3 {
   text-align:center;
@@ -86,7 +88,7 @@ body {
 }
 
 
-/* Pricing Section */
+/* Pricing/Subscribe Section */
 .pricing {
   padding: 60px 20px;
   background: #fff;
@@ -135,7 +137,7 @@ body {
   color: #444;
 }
 
-/* CTA Buttons */
+/* Pricing Buttons */
 .plan a.btn-plan {
   display: inline-block;
   border: 2px solid black;
@@ -147,7 +149,6 @@ body {
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .plan a.btn-plan:hover {
@@ -168,9 +169,10 @@ body {
 
 .grid img {
   width: 200px;
-  aspect-ratio: 4 / 5; Adjust as needed   /* Taken from MDN docs*/
+  /* Taken from MDN docs*/
+  aspect-ratio: 4 / 5; 
   object-fit: cover;
-  border-radius: 12px; /* optional */
+  border-radius: 12px; 
   display: block;
 }
 
@@ -201,7 +203,8 @@ body {
   transform: scale(1.05); /* nice hover zoom */
 }
 
-/* Apply form  */
+/* Apply form section */
+
 .creators{
   text-align:center;
 }
@@ -266,6 +269,8 @@ body {
   color: white;
   transform: scale(1.03);
 }
+
+/* Footer */
 
 .footer { 
   position: relative; /*position, left and bottom - make the footer stay at the bottom*/
@@ -336,7 +341,7 @@ margin-left:10px;
 }
 
 .accordion {
-  border:5px solid black;
+  border: 5px solid #111;
   background-color:black;
   color:white;
   width:100%;
@@ -364,7 +369,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 
 
 
-/* Contact us  */
+/* Contact us page */
 
 .contact-container p {
   font-family: 'Montserrat', sans-serif;
@@ -397,7 +402,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   border: 1px solid black;
   border-radius: 8px;
   background-color: white;
-  color: #black;
+  color: black;
   font-size: 1rem;
 }
 
@@ -416,7 +421,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   transform: scale(1.03);
 }
 
-/* Account Page Styling */
+/* Account Page  */
 
 .account-container {
   max-width: 600px;
@@ -630,9 +635,6 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   transition: background-color 0.2s;
 }
 
-.download-icon:hover {
-  background-color: #eee;
-}
 
 .download-icon:hover {
   background-color: #f0f0f0;
@@ -698,7 +700,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 }
   
 }
-  /* Very small phones (iPhone SE, small Androids) */
+  /* Very small phones */
   @media (max-width: 480px) {
     .photo-gallery {
       grid-template-columns: 1fr; /* 1 column for small screens */
