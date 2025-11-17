@@ -26,12 +26,9 @@ def premium_dashboard(request):
             priority=priority,
         )
 
-        # Decrement quota
+        # Decrement
         user.custom_images_remaining -= 1
         user.save()
-
-        # ⭐ Add success message
-        messages.success(request, "Your request has been received!")
 
         return redirect("premium_dashboard")
 
