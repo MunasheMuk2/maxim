@@ -1,7 +1,11 @@
+/* Global styles */
+
 body {
     background: #f4f4f4;
     font-family: sans-serif;
   }
+
+/* Login page */
   
   .login-container {
     max-width: 400px;
@@ -21,7 +25,8 @@ body {
   }
 
 
-  /* Center the logout content */
+  /*  logout page */
+
 .logout-container {
   display: flex;
   flex-direction: column;
@@ -32,7 +37,6 @@ body {
   text-align: center;
 }
 
-/* Optional: Style heading and text */
 .logout-container h1 {
   margin-bottom: 20px;
   font-size: 2rem;
@@ -64,8 +68,6 @@ body {
 
 /* sign up page  */
 
-/* auth.css */
-
 .auth-container {
   max-width: 400px;
   margin: 80px auto;
@@ -96,7 +98,6 @@ body {
 }
 
 .btn-submit {
-  /* background-color: black;; */
   color: white;
   padding: 12px;
   font-size: 16px;

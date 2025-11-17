@@ -15,13 +15,13 @@ The platform is designed for **content creators, businesses, marketers, and ever
 
 ### What Users Get
 
-Custom AI images crafted by trained prompt engineers
+- Custom AI images crafted by trained prompt engineers
 
-10-second AI videos tailored to the exact user brief
+- 10-second AI videos tailored to the exact user brief
 
-Faster turnaround on paid plans
+- Faster turnaround on paid plans
 
-Clean, polished, ready-to-use visuals for any industry
+- Clean, polished, ready-to-use visuals for any industry
 
 ### Summary
 
@@ -42,11 +42,11 @@ Live Site: [Deployment Link Here](https://maxim-1ca0e50f2935.herokuapp.com/)
 - Upgrade to a Creator or Pro plan for premium access.
 - Track my remaining AI requests on my account dashboard.
 - Receive fast delivery (Creator: within 1 hour, Pro: within 30 minutes).
-- Request custom AI videos (10 seconds max on Pro plan).
+- Request custom AI videos.
 
 **As a site owner, I want to:**
 - Manage all custom requests via Django Admin.
-- Control user quotas and subscription plans.
+- Control user custom requests and subscription plans.
 - Offer fast-tiered AI delivery times.
 - Maintain professional branding and responsive UI.
 - Ensure secure subscription billing via Stripe Checkout.
@@ -58,9 +58,9 @@ Live Site: [Deployment Link Here](https://maxim-1ca0e50f2935.herokuapp.com/)
 Maxim Cypher provides fast AI-generated media on demand for:
 - Businesses creating ads or marketing visuals
 - Content creators posting to social media
-- Marketing teams needing fast turnaround
+- Marketing teams 
 - Freelancers producing client assets
-- Anyone needing high-quality AI media quickly
+- Anyone needing high-quality AI media 
 
 ---
 
@@ -69,50 +69,43 @@ Maxim Cypher provides fast AI-generated media on demand for:
 ### Colour Scheme
 - **Black** – modern, bold, high-contrast
 - **White** – clean readability
-- **Blue accents** – futuristic AI aesthetic
 
 ### Typography
-- Modern **sans-serif fonts** for clarity
+- Modern **Inter and sans-serif fonts** for clarity
 - Clean UI-focused layout
 
 ### Imagery
-- Free gallery images across the site
+- Free gallery and premium images (only for subscibers)
 - User-generated premium images/videos
-- AI branding visuals
 
 ---
 
 ## Project Features
 
 ### 🧭 Navigation Bar
-- Sticky navbar across all pages
-- Links to: Home, Gallery, Pricing, Login/Register, Account
+- Navbar across all pages
+- Links to: Home, Potfolio, FAQ, Contact Us, Gallery, Pricing, Login/Register, Account & Premium Dashboaed
 - Shows Account + Logout only when logged in
 - Fully responsive with mobile hamburger menu
 
 ### 🏠 Home Page
 **Features**
-- Hero banner introducing the platform
-- Buttons for “Generate” and “Pricing”
-- Highlights: Fast Delivery, AI-Powered, Subscription-Based
-- *Screenshot Placeholder*
+-  Banner introducing the platform
+- Buttons for Subcription and Joining to be a creator
+- Highlights: AI-Powered, Subscription-Based
+
 
 ### 🖼️ Free Gallery Page
 **Features**
 - View images without login
 - Grid layout
 - Fully responsive
-- Search/filter options
-- *Screenshot Placeholder*
+
 
 ### ⚙️ Custom AI Request Dashboard
 **Features**
 - Users can submit prompts for custom images or videos
 - Displays remaining request quota
-- Creator plan: ~1 hour delivery
-- Pro plan: ~30 minutes delivery
-- Videos limited to 10 seconds
-- *Screenshot Placeholder*
 
 ### 💳 Subscription System (Stripe)
 **Features**
@@ -123,7 +116,6 @@ Maxim Cypher provides fast AI-generated media on demand for:
   - User plan
   - Remaining custom requests
   - Cancel anytime
-- *Screenshot Placeholder*
 
 ### 🧾 Account Page
 **Shows:**
@@ -147,7 +139,6 @@ Maxim Cypher provides fast AI-generated media on demand for:
 |------------------|--------|------|--------|--------|
 | Users            | ✔      | ✔    | ✔      | ✔      |
 | Premium Requests | ✔      | ✔    | ✔      | ✔      |
-| Gallery Images   | ✔      | ✔    | ✔      | ✔      |
 
 ---
 
@@ -194,19 +185,14 @@ Maxim Cypher provides fast AI-generated media on demand for:
 
 ### Solved bugs
 
-1. Although I had created a superuser locally, I had to recreate the superuser on heroku so the admin panel could show up.
-
-2. The booking form was showing an error like "Select a valid choice" for the package or time slot, even when the options looked right. Amended the packages to make sure they were in the data base, made sure the timeslots were being correctly passed into the form and updated mismatch between my local code and Heroku by updating  models and running migrations properly. (This issue came up because Heroku wasn't deployed on time—I had to wait for my GitHub Student Pack to get free credits for hosting).
-
-3. Had an issue with favicons not working with normal links in base.html and so had to use template tags.
+1. he success message appeared on the homepage even when the user hadn’t submitted the form yet.The message was being shown in a global area and stayed there after the page refreshed.Moved the message so it only appears inside the form section and changed the redirect so the page scrolls back to the form.
 
 ---
 
 ### Unsolved bugs
 
-1. Attempted to have a pop up alert message when there is a duplicate booking but site kept generating a message on the booking for due to the Django auto generated message from errors. Had to resort to using javascript within the home.html where the form is selected to scroll to the form on error. However the issue with the pop up message still stands as won't work. 
+1. High-resolution images cause longer initial page load.
 
-2. Issue with my bookings page showing an error in HTML checker regarding an aria label but there are no aria labels advised on the page or on login page etc. 
 ---
 
 ## Deployment
@@ -249,7 +235,10 @@ Maxim Cypher provides fast AI-generated media on demand for:
 
 - [VSCode](https://code.visualstudio.com/)  Used as the main code editor
 - [GitHub](https://github.com/) code host for the site
-- [W3schools](https://www.w3schools.com) 
+- [Stripe](hhttps://docs.stripe.com/billing/subscriptions/build-subscriptions/) how to build stripe subscription payment system
+- [W3schools](https://www.w3schools.com) - how to create django project
+- [djangoproject](https://docs.djangoproject.com/) Django forms
+- [Tech with Tim - Youtube](https://www.youtube.com/watch?v=c-QsfbznSXI) Guidance on using django effectively
 - Code institute tutorials for setting up models, apps, templates and heroku
 -**Favicons**: Sourced from [favicon](https://favicon.io/)
 ---
@@ -271,34 +260,6 @@ In order to confirm the correct functionality, responsiveness, and appearance:
 
     ![Microsoft Edge](screenshots/MicrosoftEdge.jpg)
 
----
-
-## Responsiveness
-
-
-+ Also checked the website's responsiveness in devtools - Chrome.
-
-    - Extra small devices:
-
-    ![XS devices](screenshots/small-devices.jpg)
-
-    ---
-
-    - Small devices:
-
-    ![Small devices](screenshots/smalldevices.jpg)
-
-    ---
-
-    - Medium devices:
-
-    ![Medium devices](screenshots/medium-devices.jpg)
-
-    ---
-    
-     - large/Xl devices:
-
-    ![Extra large devices](screenshots/largexl.jpg)
 ---
 ## Manual Testing (Maxim Cypher)
 
@@ -378,27 +339,51 @@ CRUD operations verified through both User Interface and Django Admin Panel.
 
 ---
 
-#### Services Page
+#### Portfolio Page
    
-![Services Page HTML Validator](screenshots/servicesvalidator.jpg)
+![Portfolio Page HTML Validator](screenshots/portfoliovalidator.jpg)
 
 - No errors or warnings were found when passing through the official W3C validator.
 
 ---
 
-#### Contact Page
+#### Faq Page
    
-![Contact Page HTML Validator](screenshots/contactusvalidator.jpg)
+![Faq Page HTML Validator](screenshots/faqvalidator.jpg)
 
 - No errors or warnings were found when passing through the official W3C validator.
 
 ---
 
-#### Booking Page
+#### Contact Us Page
    
-![Booking Page HTML Validator](screenshots/bookingvalidator.jpg)
+![Contact Us Page HTML Validator](screenshots/contactvalidator.jpg)
 
-- No errors or warnings found relating to my bookings page - error for aria label descirbed is non existant. Checked all templates that include a login form, especially:`login.html` , `home.html` and `base.html` 
+-  No errors or warnings were found when passing through the official W3C validator.
+
+#### Account Page
+   
+![Account Page HTML Validator](screenshots/accountvalidator.jpg)
+
+-  No errors or warnings were found when passing through the official W3C validator.
+
+#### Premium Dashboard Page
+   
+![Premium Dashboard Page HTML Validator](screenshots/premiumvalidator.jpg)
+
+-  No errors or warnings were found when passing through the official W3C validator.
+
+#### Login Page
+   
+![Login Page HTML Validator](screenshots/loginvalidator.jpg)
+
+-  No errors or warnings were found when passing through the official W3C validator.
+
+#### Logout Page
+   
+![Logout Page HTML Validator](screenshots/logoutvalidator.jpg)
+
+-  No errors or warnings were found when passing through the official W3C validator.
  
 ---
 + ### CSS
