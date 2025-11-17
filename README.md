@@ -29,6 +29,8 @@ Maxim Cypher provides premium AI media without the learning curve — users simp
 This ensures better content, less effort, and a huge time-saver for creators, professionals, and businesses.
 
 Live Site: [Deployment Link Here](https://maxim-1ca0e50f2935.herokuapp.com/)
+Wireframe: [Wireframe Link Here](https://www.canva.com/design/DAG0clNmVqI/X47xoV-Qw3WMaIncUe4V8A/edit?utm_content=DAG0clNmVqI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
 
 ---
 
@@ -388,7 +390,11 @@ CRUD operations verified through both User Interface and Django Admin Panel.
 ---
 + ### CSS
   No errors or warnings were found when passing through the official W3C (Jigsaw) validator 
-    ![CSS](screenshots/cssvalidator.jpg)
+    ![CSS](screenshots/stylecss.jpg)
+
+    + ### Auth CSS
+  No errors or warnings were found when passing through the official W3C (Jigsaw) validator 
+    ![CSS](screenshots/authcss.jpg)
 
 ---
 
