@@ -30,6 +30,8 @@ def premium_dashboard(request):
         user.custom_images_remaining -= 1
         user.save()
 
+        messages.success(request, "Your request has been received!")
+
         return redirect("premium_dashboard")
 
     return render(
