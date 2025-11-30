@@ -7,13 +7,22 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="premium-container">
   <h2>Premium Dashboard</h2>
+
+  <!-- Show flash messages -->
+  {% if messages %}
+    <ul class="messages">
+      {% for message in messages %}
+        <li class="{{ message.tags }}">{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
   <p>You have {{ remaining }} custom requests left this month.</p>
 
   {% if remaining > 0 %}
-    <form method="post" enctype="multipart/form-data">
+    <form method="post">
       {% csrf_token %}
 
       <label for="title">Request Title</label>
@@ -23,7 +32,7 @@
       <textarea id="description" name="description" placeholder="Describe your request in detail..." required></textarea>
 
       <label for="category">Category</label>
-      <select id="category" name="category">
+      <select id="category" name="category" required>
         <option value="image">Image Generation</option>
         <option value="video">Video Generation</option>
         <option value="branding">Branding</option>
@@ -31,7 +40,7 @@
       </select>
 
       <label for="priority">Priority</label>
-      <select id="priority" name="priority">
+      <select id="priority" name="priority" required>
         <option value="normal">Normal</option>
         <option value="high">High</option>
       </select>
@@ -40,23 +49,27 @@
     </form>
 
     <h2>Your Requests</h2>
-<ul>
-  {% for req in requests %}
-    <li>
-      <strong>{{ req.title }}</strong> - {{ req.description }}
-      <a href="{% url 'edit_request' req.id %}">Edit</a> |
-      <a href="{% url 'delete_request' req.id %}">Delete</a>
-    </li>
-  {% empty %}
-    <li>No requests yet.</li>
-  {% endfor %}
-</ul>
-
-
+    <ul>
+      {% for req in requests %}
+        <li>
+          <strong>{{ req.title }}</strong> — {{ req.description }}
+          <div class="actions">
+            <a href="{% url 'edit_request' req.id %}">Edit</a>
+            <form method="post" action="{% url 'delete_request' req.id %}" style="display:inline;">
+              {% csrf_token %}
+              <button type="submit">Delete</button>
+            </form>
+          </div>
+        </li>
+      {% empty %}
+        <li>No requests yet.</li>
+      {% endfor %}
+    </ul>
   {% else %}
     <p>You’ve used all your requests. Upgrade or wait for next month.</p>
   {% endif %}
 </div>
+{% endblock %}
 
 <h2 class="creators">Premium Images</h2>
 
