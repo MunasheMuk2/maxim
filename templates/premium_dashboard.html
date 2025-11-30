@@ -39,6 +39,20 @@
       <button type="submit">Submit Request</button>
     </form>
 
+    <h2>Your Requests</h2>
+<ul>
+  {% for req in requests %}
+    <li>
+      <strong>{{ req.title }}</strong> - {{ req.description }}
+      <a href="{% url 'edit_request' req.id %}">Edit</a> |
+      <a href="{% url 'delete_request' req.id %}">Delete</a>
+    </li>
+  {% empty %}
+    <li>No requests yet.</li>
+  {% endfor %}
+</ul>
+
+
   {% else %}
     <p>You’ve used all your requests. Upgrade or wait for next month.</p>
   {% endif %}
