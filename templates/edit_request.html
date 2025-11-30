@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+  <h2>Edit Premium Request</h2>
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title" class="form-control" value="{{ request_obj.title }}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" class="form-control" rows="4" required>{{ request_obj.description }}</textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="category">Category:</label>
+      <select name="category" id="category" class="form-control" required>
+        {% for value, label in request_obj.CATEGORY_CHOICES %}
+          <option value="{{ value }}" {% if request_obj.category == value %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="priority">Priority:</label>
+      <select name="priority" id="priority" class="form-control" required>
+        {% for value, label in request_obj.PRIORITY_CHOICES %}
+          <option value="{{ value }}" {% if request_obj.priority == value %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Update Request</button>
+    <a href="{% url 'premium_dashboard' %}" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>
+{% endblock %}
