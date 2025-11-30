@@ -48,23 +48,9 @@
       <button type="submit">Submit Request</button>
     </form>
 
-    <h2>Your Requests</h2>
-    <ul>
-      {% for req in requests %}
-        <li>
-          <strong>{{ req.title }}</strong> — {{ req.description }}
-          <div class="actions">
-            <a href="{% url 'edit_request' req.id %}" class="btn btn-sm btn-outline-primary">Edit</a>
-          </div>
-        </li>
-      {% empty %}
-        <li>No requests yet.</li>
-      {% endfor %}
-    </ul>
-  {% else %}
-    <p>You’ve used all your requests. Upgrade or wait for next month.</p>
-  {% endif %}
-</div>
+    {% if requests %}
+  <a href="{% url 'edit_request' requests.0.id %}" class="btn btn-secondary mt-3">Edit My Requests</a>
+{% endif %}
 
 
 <h2 class="creators">Premium Images</h2>
