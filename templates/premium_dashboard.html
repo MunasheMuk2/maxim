@@ -54,11 +54,7 @@
         <li>
           <strong>{{ req.title }}</strong> — {{ req.description }}
           <div class="actions">
-            <a href="{% url 'edit_request' req.id %}">Edit</a>
-            <form method="post" action="{% url 'delete_request' req.id %}" style="display:inline;">
-              {% csrf_token %}
-              <button type="submit">Delete</button>
-            </form>
+            <a href="{% url 'edit_request' req.id %}" class="btn btn-sm btn-outline-primary">Edit</a>
           </div>
         </li>
       {% empty %}
