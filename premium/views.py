@@ -103,8 +103,16 @@ def delete_request(request, pk):
     if request.method == "POST":
         req.delete()
         messages.success(request, "Request deleted successfully!")
-        return redirect(
-            "edit_request", pk=pk
-        )  # Redirect to edit page (may need adjustment)
+
+        # Redirect to the edit page of the next available request
+        remaining_requests = PremiumRequest.objects.filter(user=request.user).order_by(
+            "-created_at"
+        )
+        if remaining_requests.exists():
+            next_req = remaining_requests.first()
+            return redirect("edit_request", pk=next_req.pk)
+
+        # If no requests remain, go back to the dashboard
+        return redirect("premium_dashboard")
 
     return render(request, "confirm_delete_request.html", {"request_obj": req})

@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* General Reset */
+/* Global style */
 
 * {
   margin: 0;
@@ -24,7 +24,6 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-  /* background: red !important; */
   background-color: #f9f9f9;
   color: #333;
 }
@@ -41,6 +40,8 @@ body {
     display: inline-block;
 }
 
+/* Home page */
+
 .main-header{
   font-size: 70px;
 }
@@ -53,6 +54,7 @@ body {
   text-align:center;
 }
 
+/* Featured work homepage */
 
 .featured h3 {
   text-align:center;
@@ -86,7 +88,7 @@ body {
 }
 
 
-/* Pricing Section */
+/* Pricing/Subscribe Section */
 .pricing {
   padding: 60px 20px;
   background: #fff;
@@ -135,22 +137,24 @@ body {
   color: #444;
 }
 
-/* CTA Buttons */
-.plan button {
+/* Pricing Buttons */
+.plan a.btn-plan {
+  display: inline-block;
+  border: 2px solid black;
+  background:white;
   color: black;
   padding: 10px 20px;
-  border: none;
   border-radius: 25px;
   cursor: pointer;
   font-size: 0.95rem;
   font-weight: 500;
-  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
 }
 
-.plan button:hover {
+.plan a.btn-plan:hover {
   background: black;
   transform: scale(1.05);
-  color:white;
+  color: white;
 }
 
 .grid{
@@ -165,9 +169,10 @@ body {
 
 .grid img {
   width: 200px;
-  aspect-ratio: 4 / 5; Adjust as needed   /* Taken from MDN docs*/
+  /* Taken from MDN docs*/
+  aspect-ratio: 4 / 5; 
   object-fit: cover;
-  border-radius: 12px; /* optional */
+  border-radius: 12px; 
   display: block;
 }
 
@@ -198,7 +203,8 @@ body {
   transform: scale(1.05); /* nice hover zoom */
 }
 
-/* Apply form  */
+/* Apply form section */
+
 .creators{
   text-align:center;
 }
@@ -264,6 +270,8 @@ body {
   transform: scale(1.03);
 }
 
+/* Footer */
+
 .footer { 
   position: relative; /*position, left and bottom - make the footer stay at the bottom*/
   left: 0;
@@ -296,10 +304,25 @@ body {
 
 /* Portfolio page */
 /* Masonry layout using CSS columns */
+
+.portfolio-header {
+  margin-left:10px;
+}
+
+.masonry-gallery h3 {
+  display: none;
+}
+
 .masonry-gallery {
   column-count: 4;
   column-gap: 20px;
   padding: 20px;
+}
+
+/* FAQ page */
+
+.hidden-heading {
+  display: none;
 }
 
 .faq-header{
@@ -318,7 +341,7 @@ margin-left:10px;
 }
 
 .accordion {
-  border:5px solid black;
+  border: 5px solid #111;
   background-color:black;
   color:white;
   width:100%;
@@ -346,7 +369,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 
 
 
-/* Contact us  */
+/* Contact us page */
 
 .contact-container p {
   font-family: 'Montserrat', sans-serif;
@@ -379,7 +402,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   border: 1px solid black;
   border-radius: 8px;
   background-color: white;
-  color: #black;
+  color: black;
   font-size: 1rem;
 }
 
@@ -398,7 +421,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   transform: scale(1.03);
 }
 
-/* Account Page Styling */
+/* Account Page  */
 
 .account-container {
   max-width: 600px;
@@ -452,7 +475,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 
 /* Premium Dashboard Page */
 .premium-container {
-  max-width: 700px;
+  max-width: 80%;
   margin: 60px auto;
   padding: 40px;
   background: #ffffff;
@@ -481,6 +504,9 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   display: flex;
   flex-direction: column;
   gap: 18px;
+  max-width: 600px;  /* Limit form width */
+  margin: 0 auto;    /* Center the form */
+  width: 100%;       /* Responsive on small screens */
 }
 
 .premium-container label {
@@ -494,26 +520,36 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   resize: vertical;
 }
 
-/* Submit Button */
-/* Submit Button */
-.premium-container button {
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;           /* Allows buttons to wrap on small screens */
+  gap: 20px;                 /* Space between buttons */
+  justify-content: center;  /* Center them horizontally */
+  margin-top: 20px;
+  margin-bottom: 30px;  
+}
+
+.premium-container button,
+.edit-btn {
+  display: inline-block;     /* Ensures <a> and <button> behave the same */
   padding: 12px 20px;
-  margin: 10px auto;
   border-radius: 8px;
   border: 2px solid black;
   background: white;
   font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
   font-weight: 600;
-  width: auto;
-  max-width: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  min-width: 160px;          /* Ensures buttons are wide enough */
+  text-align: center;
 }
 
-.premium-container button:hover {
+.premium-container button:hover,
+.edit-btn:hover {
   background: black;
   color: white;
-  transform: scale(1.03);
 }
 
 .messages {
@@ -612,9 +648,6 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   transition: background-color 0.2s;
 }
 
-.download-icon:hover {
-  background-color: #eee;
-}
 
 .download-icon:hover {
   background-color: #f0f0f0;
@@ -680,7 +713,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 }
   
 }
-  /* Very small phones (iPhone SE, small Androids) */
+  /* Very small phones */
   @media (max-width: 480px) {
     .photo-gallery {
       grid-template-columns: 1fr; /* 1 column for small screens */

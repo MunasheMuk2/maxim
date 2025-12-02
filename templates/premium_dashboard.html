@@ -21,16 +21,18 @@
 
   <p>You have {{ remaining }} custom requests left this month.</p>
 
-  {% if remaining > 0 %}
+  <div class="request-section">
+
+    {% if remaining > 0 %}
     <form method="post">
       {% csrf_token %}
-
+  
       <label for="title">Request Title</label>
       <input type="text" id="title" name="title" placeholder="Short title for your request..." required>
-
+  
       <label for="description">Description</label>
       <textarea id="description" name="description" placeholder="Describe your request in detail..." required></textarea>
-
+  
       <label for="category">Category</label>
       <select id="category" name="category" required>
         <option value="image">Image Generation</option>
@@ -38,24 +40,30 @@
         <option value="branding">Branding</option>
         <option value="other">Other</option>
       </select>
-
+  
       <label for="priority">Priority</label>
       <select id="priority" name="priority" required>
         <option value="normal">Normal</option>
         <option value="high">High</option>
       </select>
 
-      <button type="submit">Submit Request</button>
+      <!-- Button Row -->
+      <div class="button-row">
+        <button type="submit">Submit Request</button>
+      
+        {% if requests %}
+          <a href="{% url 'edit_request' requests.0.id %}" class="edit-btn">
+            Edit My Requests
+          </a>
+        {% endif %}
+      </div>
     </form>
-
+  
     {% else %}
-    <p>You’ve used all your requests. Upgrade or wait for next month.</p>
-  {% endif %}
-
-
-    {% if requests %}
-  <a href="{% url 'edit_request' requests.0.id %}" class="btn btn-secondary mt-3">Edit My Requests</a>
-  {% endif %}
+      <p>You’ve used all your requests. Upgrade or wait for next month.</p>
+    {% endif %}
+  
+  </div>
 
 <h2 class="creators">Premium Images</h2>
 
