@@ -573,6 +573,99 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   border-color: #1f7a1f;
 }
 
+/*  Edit Request  */
+
+.edit-request-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #fafafa;
+}
+
+.edit-request-heading {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.edit-request-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-bottom: 30px;
+}
+
+.edit-request-form input,
+.edit-request-form textarea,
+.edit-request-form select {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Scoped Button Styles */
+.edit-request-btn-submit,
+.edit-request-btn-delete,
+.edit-request-btn-small,
+.edit-request-btn-back {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 2px solid black;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  min-width: 160px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+/* Colors */
+.edit-request-btn-submit,
+.edit-request-btn-delete,
+.edit-request-btn-back {
+  background: black;
+  color: white;
+}
+
+.edit-request-btn-submit:hover,
+.edit-request-btn-delete:hover,
+.edit-request-btn-back:hover {
+  background: #333;
+  color: white;
+}
+
+.edit-request-btn-small {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  background: black;
+  color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+.edit-request-btn-small:hover {
+  background: white;
+  color: black;
+}
+
+/* Other Request List */
+.edit-request-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.edit-request-list li {
+  margin-bottom: 10px;
+}
+
 
 @media (max-width: 1200px) {
   .masonry-gallery {
