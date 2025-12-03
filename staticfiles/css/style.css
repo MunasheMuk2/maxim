@@ -575,6 +575,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
 
 /*  Edit Request  */
 
+/* Wrapper for spacing from navbar */
 .edit-request-wrapper {
   margin-top: 60px;
   display: flex;
@@ -582,7 +583,7 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   padding: 20px;
 }
 
-/* Container styling */
+/* Main container */
 .edit-request-container {
   max-width: 700px;
   width: 100%;
@@ -592,20 +593,36 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form fields */
+/* FORM STYLING */
+
 .edit-request-container form {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-/* Label styling */
 .edit-request-container label {
   font-weight: bold;
   margin-bottom: 5px;
 }
 
-/* Button styling */
+.edit-request-container input,
+.edit-request-container textarea,
+.edit-request-container select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.edit-request-container textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* BUTTONS */
+
 .edit-btn-primary,
 .edit-btn-secondary,
 .edit-btn-tertiary {
@@ -619,6 +636,11 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   cursor: pointer;
   transition: all 0.3s ease;
   width: 100%;
+  display: inline-block;
+}
+
+.edit-btn-primary {
+  margin-bottom: 20px; /* Spacing between Save and Delete buttons */
 }
 
 .edit-btn-primary:hover,
@@ -628,18 +650,40 @@ content: "−"; /* Changes to minus when clicked due to the function in javascri
   color: white;
 }
 
-/* Back link button */
+/* Edit buttons under requests */
+.edit-btn-tertiary {
+  margin-top: 10px;
+  max-width: 150px;
+}
+
+/* Back to Dashboard link styled as button */
 .edit-btn-link {
   display: inline-block;
-  margin-top: 24px;
+  margin-top: 30px;
   padding: 10px 18px;
   background: black;
   color: white;
   text-decoration: none;
   border-radius: 6px;
+  font-weight: 600;
 }
 
-/* Margin above 'Your Other Requests' */
+/* OTHER REQUESTS SECTION */
+
+.other-requests-section {
+  margin-top: 60px;
+}
+
+.other-request-list {
+  list-style: none;
+  padding: 0;
+}
+
+.request-item {
+  margin-bottom: 30px;
+}
+
+/* Margin above 'Other Requests' */
 .other-requests-section {
   margin-top: 50px;
 }

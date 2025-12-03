@@ -52,21 +52,19 @@
 
     <div class="other-requests-section">
       <h3>Your Other Requests</h3>
-      <ul>
+      <ul class="other-request-list">
         {% for req in requests %}
+          {% if req.id != request_obj.id %}
           <li>
-            <strong>{{ req.title }}</strong> — {{ req.description }}
-            {% if req.id != request_obj.id %}
+            <div class="request-item">
+              <strong>{{ req.title }}</strong> — {{ req.description }}
               <a href="{% url 'edit_request' req.id %}" class="edit-btn-tertiary">Edit</a>
-            {% endif %}
+            </div>
           </li>
+          {% endif %}
         {% empty %}
           <li>No other requests yet.</li>
         {% endfor %}
       </ul>
     </div>
-
-    <a href="{% url 'premium_dashboard' %}" class="edit-btn-link">← Back to Dashboard</a>
-  </div>
-</div>
 {% endblock %}
